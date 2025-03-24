@@ -23,3 +23,37 @@
 
 [2025-03-24T01:51:54.377Z] [2025-03-24T01:51:54.376Z] [QR_CODE] O QR Code foi gerado, mas o celular está desconectado. Conecte o WhatsApp no celular e tente novamente.
 
+[2025-03-24T02:28:38.011Z] [2025-03-24T02:28:38.010Z] [QR_CODE] O QR Code foi gerado, mas o celular está desconectado. Conecte o WhatsApp no celular e tente novamente.
+
+[2025-03-24T02:28:39.439Z] [2025-03-24T02:28:39.439Z] [QR_CODE] Nenhuma sessão foi encontrada, por favor leia o QR-Code para conectar o Whatsapp.
+
+[2025-03-24T02:31:07.895Z] [2025-03-24T02:31:07.894Z] [QR_CODE] O QR Code foi gerado, mas o celular está desconectado. Conecte o WhatsApp no celular e tente novamente.
+
+[2025-03-24T02:31:09.019Z] [2025-03-24T02:31:09.019Z] [QR_CODE] Nenhuma sessão foi encontrada, por favor leia o QR-Code para conectar o Whatsapp.
+
+[2025-03-24T02:31:33.403Z] [2025-03-24T02:31:33.402Z] [QR_CODE] O QR Code foi gerado, mas o celular está desconectado. Conecte o WhatsApp no celular e tente novamente.
+
+[2025-03-24T02:31:35.153Z] [2025-03-24T02:31:35.152Z] [QR_CODE] Nenhuma sessão foi encontrada, por favor leia o QR-Code para conectar o Whatsapp.
+
+[2025-03-24T02:34:21.189Z] [2025-03-24T02:34:21.188Z] [QR_CODE] O QR Code foi gerado, mas o celular está desconectado. Conecte o WhatsApp no celular e tente novamente.
+
+[2025-03-24T02:34:22.839Z] [2025-03-24T02:34:22.839Z] [QR_CODE] Nenhuma sessão foi encontrada, por favor leia o QR-Code para conectar o Whatsapp.
+
+[2025-03-24T02:34:43.989Z] [2025-03-24T02:34:43.988Z] [QR_CODE] O QR Code foi gerado, mas o celular está desconectado. Conecte o WhatsApp no celular e tente novamente.
+
+[2025-03-24T02:34:45.424Z] [2025-03-24T02:34:45.424Z] [QR_CODE] Nenhuma sessão foi encontrada, por favor leia o QR-Code para conectar o Whatsapp.
+
+[2025-03-24T02:35:03.037Z] [2025-03-24T02:35:03.037Z] [PUPPETEER] A janela do navegador foi fechada. Por favor, reinicie o aplicativo e encerre todas as instancias do Chrome!.
+
+[2025-03-24T02:35:03.439Z] [2025-03-24T02:35:03.438Z] [QR_CODE] Ocorreu um erro ao ler o QR Code. Tente escanear novamente.
+
+[2025-03-24T02:35:03.440Z] [2025-03-24T02:35:03.440Z] [UNKNOWN] O processo foi cancelado automaticamente. Verifique a conexão e tente novamente.
+
+[2025-03-24T02:35:03.442Z] [2025-03-24T02:35:03.442Z] [UNKNOWN] Falha ao inicializar o cliente: undefined
+
+[2025-03-24T02:35:03.442Z] Auto Close Called
+[2025-03-24T02:35:03.445Z] [2025-03-24T02:35:03.444Z] [UNKNOWN] Erro ao verificar status: Cannot read properties of null (reading 'isConnected')
+TypeError: Cannot read properties of null (reading 'isConnected')
+    at StatusServerWpp (file:///C:/Users/Administrator/Desktop/whats2/WhatsUp/src/whatsapp/api/client.js:433:45)
+    at InitializeChatBot (file:///C:/Users/Administrator/Desktop/whats2/WhatsUp/src/whatsapp/api/client.js:778:32)
+
