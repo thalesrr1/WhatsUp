@@ -1,0 +1,29 @@
+{
+  "name": "electron-wpp-server",
+  "version": "1.0.0",
+  "description": "Servidor WhatsApp",
+  "author": "Código Up",
+  "main": "src/main.js",
+  "type": "module",
+  "asar": true,
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-packager . WhatsUp --platform=win32 --arch=x64 --icon=icon.ico --out=dist --overwrite"
+  },
+  "dependencies": {
+    "@wppconnect-team/wppconnect": "^1.36.0",
+    "axios": "^1.7.9",
+    "electron-store": "^10.0.1",
+    "express": "^4.21.2",
+    "node-aplay": "^1.0.3",
+    "node-notifier": "^10.0.1",
+    "play-sound": "^1.1.6",
+    "puppeteer": "^24.2.0",
+    "wordnet-db": "^3.1.14",
+    "ws": "^8.18.0"
+  },
+  "devDependencies": {
+    "electron": "^34.0.2",
+    "electron-packager": "^17.1.2"
+  }
+}

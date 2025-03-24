@@ -1,0 +1,25 @@
+=== ERROR LOG ===
+[2025-03-20T21:04:06.582Z] Error: listen EADDRINUSE: address already in use :::7079
+    at Server.setupListenHandle [as _listen2] (node:net:1908:16)
+    at listenInCluster (node:net:1965:12)
+    at Server.listen (node:net:2067:7)
+    at Function.listen (C:\electron-wpp-server\node_modules\express\lib\application.js:635:24)
+    at InitServer (file:///C:/electron-wpp-server/src/whatsapp/api/server.js:112:9)
+    at InitializeChatBot (file:///C:/electron-wpp-server/src/whatsapp/api/client.js:540:15)
+    at file:///C:/electron-wpp-server/src/main.js:36:5
+[2025-03-20T21:04:07.891Z] Error: Failed to launch the browser process! undefined
+
+
+TROUBLESHOOTING: https://pptr.dev/troubleshooting
+
+    at ChildProcess.onClose (C:\electron-wpp-server\node_modules\@puppeteer\browsers\lib\cjs\launch.js:318:24)
+    at ChildProcess.emit (node:events:530:35)
+    at ChildProcess._handle.onexit (node:internal/child_process:293:12)
+[2025-03-20T21:41:54.892Z] Error: Failed to launch the browser process!
+
+
+TROUBLESHOOTING: https://pptr.dev/troubleshooting
+
+    at ChildProcess.onClose (C:\electron-wpp-server\node_modules\@puppeteer\browsers\lib\cjs\launch.js:318:24)
+    at ChildProcess.emit (node:events:530:35)
+    at ChildProcess._handle.onexit (node:internal/child_process:293:12)

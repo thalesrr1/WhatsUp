@@ -1,0 +1,1242 @@
+<style>
+    /* Variáveis de cores e estilos */
+    :root {
+        --primary-color: #00a884;
+        --primary-hover: #008f6e;
+        --bg-color: #f8f9fa;
+        --card-bg: #ffffff;
+        --border-color: #e9edef;
+        --color-input:  #FFFFFF;
+        --input-focus: rgba(0, 168, 132, 0.15);
+        --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+        --shadow-md: 0 2px 8px rgba(0, 0, 0, 0.06);
+        --radius: 8px;
+        --radius-lg: 12px;
+        --transition: all 0.2s ease;
+    }
+
+    /* Reset e estilos gerais */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    /* Estilos gerais */
+    .configuracao-content {
+        width: 100%;
+        height: 100%;
+        margin: auto;
+        background: var(color-bg-main);
+        padding: 24px;
+    }
+
+    .configuracao-content h2 {
+        font-size: 24px;
+        color: var(--color-text-primary);
+        margin-bottom: 24px;
+        font-weight: 600;
+        letter-spacing: -0.5px;
+    }
+
+    /* Estilos das abas */
+    .tabs {
+        display: flex;
+        margin-bottom: 28px;
+        position: relative;
+        background-color: var(--card-bg);
+        border-radius: var(--radius);
+        padding: 4px;
+        box-shadow: var(--shadow-sm);
+    }
+
+    .tab-button {
+        flex: 1;
+        padding: 12px 16px;
+        background: none;
+        border: none;
+        font-size: 15px;
+        font-weight: 500;
+        cursor: pointer;
+        color: var(--color-text-secondary);
+        transition: var(--transition);
+        position: relative;
+        text-align: center;
+        border-radius: var(--radius);
+        z-index: 1;
+    }
+
+    .tab-button.active {
+        color: var(--primary-color);
+        background-color: rgba(0, 168, 132, 0.08);
+    }
+
+    .tab-content {
+        display: none;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .tab-content.active {
+        display: block;
+        animation: fadeIn 0.3s ease;
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(8px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Estilizando as seções */
+    .config-section {
+        background-color: var(--card-bg);
+        border-radius: var(--radius-lg);
+        box-shadow: var(--shadow-md);
+        padding: 24px;
+        margin-bottom: 24px;
+        border: 1px solid rgba(0, 0, 0, 0.03);
+    }
+
+    .config-section h3 {
+        margin-bottom: 24px;
+        font-size: 18px;
+        color: var(--color-text-primary);
+        padding-bottom: 12px;
+        position: relative;
+        font-weight: 600;
+        letter-spacing: -0.3px;
+    }
+
+    .config-section h3::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 40px;
+        height: 3px;
+        background-color: var(--color-text-primary);
+        border-radius: 3px;
+    }
+
+    /* Separador */
+    .divider {
+        height: 1px;
+        background: var(--border-color);
+        margin: 32px 0;
+        opacity: 0.4;
+    }
+
+    /* Grid para os campos do formulário */
+    .form-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    @media (min-width: 768px) {
+        .form-grid {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+
+    /* Estilos para inputs e selects */
+    .form-group {
+        margin-bottom: 24px;
+        position: relative;
+    }
+
+    .form-label {
+        position: absolute;
+        top: 12px;
+        left: 12px;
+        font-size: 14px;
+        color: var(--color-text-secondary);
+        transition: var(--transition);
+        pointer-events: none;
+        background: var(--color-input);
+        border-radius: 20%;
+        padding: 0 4px;
+        z-index: 1;
+    }
+
+    .form-control {
+        width: 100%;
+        padding: 14px 12px;
+        border: 1px solid var(--border-color);
+        border-radius: var(--radius);
+        font-size: 15px;
+        transition: var(--transition);
+        background-color: var(--color-input);
+    }
+
+    .form-control:focus {
+        outline: none;
+        border-color: var(--primary-color);
+        box-shadow: 0 0 0 3px var(--input-focus);
+    }
+
+    .form-control:focus + .form-label,
+    .form-control:not(:placeholder-shown) + .form-label {
+        top: -8px;
+        font-size: 12px;
+        color: var(--primary-color);
+        font-weight: 500;
+    }
+
+    select.form-control {
+        appearance: none;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%23667781' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14L2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        background-position: right 12px center;
+        padding-right: 36px;
+    }
+
+    select.form-control:invalid {
+        color: var(--text-secondary);
+    }
+
+    /* Estilo do botão */
+    .btn-container {
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 32px;
+    }
+
+    .btn-confirmar {
+        background-color: var(--primary-color);
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        font-size: 15px;
+        font-weight: 500;
+        border-radius: var(--radius);
+        cursor: pointer;
+        transition: var(--transition);
+        box-shadow: var(--shadow-sm);
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .btn-confirmar::after {
+        content: '→';
+        font-size: 18px;
+        transition: transform 0.2s ease;
+    }
+
+    .btn-confirmar:hover {
+        background-color: var(--primary-hover);
+        transform: translateY(-1px);
+        box-shadow: 0 4px 10px rgba(0, 168, 132, 0.2);
+    }
+
+    .btn-confirmar:hover::after {
+        transform: translateX(4px);
+    }
+
+    .btn-confirmar:active {
+        transform: translateY(0);
+    }
+
+    /* Intent List Styles - Versão modernizada */
+    .intent-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        background-color: var(--card-bg);
+        border-radius: var(--radius-lg);
+        box-shadow: var(--shadow-md);
+        overflow: hidden;
+        border: 1px solid rgba(0, 0, 0, 0.03);
+    }
+
+    .intent-item {
+        display: flex;
+        align-items: flex-start;
+        padding: 16px 20px;
+        border-bottom: 1px solid var(--border-color); 
+        cursor: pointer;
+        color: var(--color-text-primary);
+        transition: background-color 0.2s;
+        position: relative;
+    }
+
+    .intent-item:last-child {
+        border-bottom: none;
+    }
+
+    .intent-item:hover {
+        background-color: rgba(0, 0, 0, 0.02);
+    }
+
+    .intent-status {
+        width: 8px;
+        height: 8px;
+        background-color: var(--primary-color);
+        border-radius: 50%;
+        margin-top: 6px;
+        margin-right: 12px;
+        flex-shrink: 0;
+        transition: transform 0.2s ease;
+    }
+
+    .intent-item:hover .intent-status {
+        transform: scale(1.2);
+    }
+        
+    .intent-status.inactive {
+        background-color: #ccc;
+    }
+
+    .intent-content {
+        flex-grow: 1;
+    }
+
+    .intent-number {
+        font-size: 14px;
+        color: var(--text-primary);
+        margin-bottom: 4px;
+        font-weight: 500;
+    }
+
+    .intent-description {
+        font-size: 13px;
+        color: var(--text-secondary);
+        line-height: 1.4;
+    }
+
+    .intent-arrow {
+        color: var(--text-secondary);
+        margin-left: 12px;
+        font-size: 20px;
+        flex-shrink: 0;
+        transition: transform 0.2s ease;
+    }
+
+    .intent-item:hover .intent-arrow {
+        transform: translateX(4px);
+        color: var(--primary-color);
+    }
+
+    /* Sliding Panel Styles - Versão modernizada */
+    .sliding-panel {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 60%;
+        height: 100%;
+        background-color: var(--card-bg);
+        transition: right 0.3s ease, box-shadow 0.3s ease;
+        z-index: 1000;
+        box-shadow: none;
+        overflow-y: auto;
+    }
+
+    .sliding-panel.active {
+        right: 0;
+        box-shadow: -5px 0 25px rgba(0, 0, 0, 0.1);
+    }
+
+    .panel-header {
+        display: flex;
+        align-items: center;
+        padding: 16px 20px;
+        border-bottom: 1px solid var(--border-color);
+        background-color: var(--primary-color);
+        color: white;
+    }
+
+    .back-button {
+        background: none;
+        border: none;
+        color: white;
+        cursor: pointer;
+        font-size: 24px;
+        padding: 8px;
+        margin-right: 16px;
+        transition: transform 0.2s ease;
+    }
+
+    .back-button:hover {
+        transform: translateX(-4px);
+    }
+
+    .panel-title {
+        font-size: 16px;
+        font-weight: 500;
+        color: white;
+    }
+
+    .message-intent-container {
+        background-color: var(--card-bg);
+        padding: 24px;
+    }
+
+    .message-textarea {
+        min-height: 120px;
+        font-weight: 400;
+        resize: vertical;
+        border: 1px solid var(--border-color);
+        border-radius: var(--radius);
+        padding: 12px;
+        font-size: 14px;
+        width: 100%;
+        transition: var(--transition);
+    }
+
+    .message-textarea:focus {
+        outline: none;
+        border-color: var(--primary-color);
+        box-shadow: 0 0 0 3px var(--input-focus);
+    }
+
+    .character-count {
+        text-align: right;
+        color: var(--text-secondary);
+        font-size: 12px;
+        margin-top: 4px;
+    }
+
+    .variables-container {
+        margin: 24px 0;
+    }
+
+    .variables-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: 8px;
+        margin-top: 8px;
+    }
+
+    .variable-btn {
+        background-color: rgba(0, 168, 132, 0.08);
+        border: none;
+        padding: 8px 12px;
+        border-radius: 20px;
+        color: var(--primary-color);
+        cursor: pointer;
+        font-size: 13px;
+        transition: all 0.2s ease;
+    }
+
+    .variable-btn:hover {
+        background-color: rgba(0, 168, 132, 0.15);
+        transform: translateY(-1px);
+    }
+
+    .message-preview {
+        margin-bottom: 24px;
+        background-color: #f0f2f5;
+        border-radius: var(--radius);
+        padding: 16px;
+    }
+
+    .preview-container {
+        background-color: transparent;
+    }
+
+    .preview-message {
+        max-width: 80%;
+        background-color: #e7ffdb;
+        padding: 10px 14px;
+        border-radius: 12px 12px 0 12px;
+        position: relative;
+        margin-left: auto;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    }
+
+    .preview-time {
+        font-size: 11px;
+        color: var(--text-secondary);
+        display: block;
+        text-align: right;
+        margin-top: 4px;
+    }
+
+    .preview-content {
+        font-size: 14px;
+        color: var(--text-primary);
+        white-space: pre-wrap;
+        line-height: 1.4;
+    }
+
+    .toggle-container {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 24px;
+    }
+
+    .switch {
+        position: relative;
+        display: inline-block;
+        width: 44px;
+        height: 24px;
+    }
+
+    .switch input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+
+    .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #ccc;
+        transition: .4s;
+        border-radius: 24px;
+    }
+
+    .slider:before {
+        position: absolute;
+        content: "";
+        height: 18px;
+        width: 18px;
+        left: 3px;
+        bottom: 3px;
+        background-color: white;
+        transition: .4s;
+        border-radius: 50%;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+    }
+
+    input:checked + .slider {
+        background-color: var(--primary-color);
+    }
+
+    input:checked + .slider:before {
+        transform: translateX(20px);
+    }
+
+    .status-text {
+        font-size: 14px;
+        color: var(--primary-color);
+        font-weight: 500;
+    }
+
+    .form-title {
+        font-size: 1.1em;
+        font-weight: 600;
+        margin-bottom: 5px;
+        color: var(--text-primary);
+    }
+
+    .form-description {
+        font-size: 0.9em;
+        color: var(--text-secondary);
+        margin-bottom: 16px;
+    }
+
+    .divider-intent {
+        margin: 32px 0;
+        padding-top: 8px;
+        position: relative;
+    }
+
+    .divider-intent-title {
+        font-size: 1.1em;
+        font-weight: 600;
+        margin-bottom: 20px;
+        color: var(--text-primary);
+        padding-bottom: 8px;
+        border-bottom: 1px solid var(--border-color);
+    }
+</style>
+
+<!-- configuracao.html -->
+<div class="configuracao-content">
+    <h2>Configurações</h2>
+    
+    <div class="tabs">
+        <button class="tab-button active" data-tab="principal">Principal</button>
+        <button class="tab-button" data-tab="delivery">Delivery</button>
+    </div>
+
+    <div id="principal" class="tab-content active">
+        <!-- Seção: Configuração do Servidor -->
+        <div class="config-section">
+            <h3>Configuração do Servidor</h3>
+            <div class="form-grid">
+                <div class="form-group">
+                    <input type="number" id="porta-node" class="form-control" placeholder=" ">
+                    <label for="porta-node" class="form-label">Porta Node</label>
+                </div>
+                <div class="form-group">
+                    <select id="ambiente" class="form-control" required>
+                        <option value="" disabled selected></option>
+                        <option value="basico">Padrão</option>
+                        <option value="delivery">Delivery</option>
+                    </select>
+                    <label for="ambiente" class="form-label">Ambiente</label>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Separador -->
+        <div class="divider"></div>
+    
+        <!-- Seção: Configuração do Delivery -->
+        <div class="config-section">
+            <h3>Configuração do Delivery</h3>
+            <div class="form-grid">
+                <div class="form-group">
+                    <input type="number" id="porta-aquipede" class="form-control" placeholder=" ">
+                    <label for="porta-aquipede" class="form-label">Porta AquiPede</label>
+                </div>
+                <div class="form-group">
+                    <input type="text" id="link-delivery" class="form-control" placeholder=" ">
+                    <label for="link-delivery" class="form-label">Link do Delivery</label>
+                </div>
+                <div class="form-group">
+                    <input type="text" id="nome-delivery" class="form-control" placeholder=" ">
+                    <label for="nome-delivery" class="form-label">Nome do Delivery</label>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="email-delivery" class="form-control" placeholder=" ">
+                    <label for="email-delivery" class="form-label">E-mail do Delivery</label>
+                </div>
+            </div>
+
+            <!-- Botão de confirmação -->
+            <div class="btn-container">
+                <button id="btn-confirmar" class="btn-confirmar">Confirmar Alterações</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="delivery" class="tab-content">
+        <div class="divider-intent">
+            <h2 class="divider-intent-title">   Modelo de resposta para atendimento automático</h2>
+        </div>
+        
+        <ul class="intent-list">
+            <li class="intent-item" data-intent="mensagem_inicial">
+                <div class="intent-status"></div>
+                <div class="intent-content">
+                    <div class="intent-number">1. Mensagem inicial</div>
+                    <div class="intent-description">Esta será a primeira resposta do robô em uma nova conversa.</div>
+                </div>
+                <div class="intent-arrow">›</div>
+            </li>
+            <li class="intent-item" data-intent="resposta_fazer_pedido">
+                <div class="intent-status"></div>
+                <div class="intent-content">
+                    <div class="intent-number">2. Fazer pedido</div>
+                    <div class="intent-description">Quando o cliente deseja fazer um pedido.</div>
+                </div>
+                <div class="intent-arrow">›</div>
+            </li>
+            <li class="intent-item" data-intent="resposta_pedido_andamento">
+                <div class="intent-status"></div>
+                <div class="intent-content">
+                    <div class="intent-number">3. Pedido em andamento (cliente identificado pelo telefone)</div>
+                    <div class="intent-description">Informações sobre um pedido que já foi feito e ainda está em processamento.</div>
+                </div>
+                <div class="intent-arrow">›</div>
+            </li>
+            <li class="intent-item" data-intent="resposta_pedido_andamento_nao_identificado">
+                <div class="intent-status"></div>
+                <div class="intent-content">
+                    <div class="intent-number">4. Pedido em andamento (cliente não identificado pelo telefone)</div>
+                    <div class="intent-description">Informações sobre um pedido, porém o cliente ainda não fez pedido ou não fez com o mesmo número do WhatsApp.</div>
+                </div>
+                <div class="intent-arrow">›</div>
+            </li>
+            <li class="intent-item" data-intent="resposta_informacao_cardapio">
+                <div class="intent-status"></div>
+                <div class="intent-content">
+                    <div class="intent-number">5. Informação sobre cardápio/catálogo</div>
+                    <div class="intent-description">Perguntas ou solicitações de informações sobre o cardápio ou catálogo do restaurante.</div>
+                </div>
+                <div class="intent-arrow">›</div>
+            </li>
+            <li class="intent-item" data-intent="resposta_atendente">
+                <div class="intent-status"></div>
+                <div class="intent-content">
+                    <div class="intent-number">6. Falar com atendente</div>
+                    <div class="intent-description">Quando o cliente deseja falar diretamente com um humano.</div>
+                </div>
+                <div class="intent-arrow">›</div>
+            </li>
+            <li class="intent-item" data-intent="resposta_existe_promocao">
+                <div class="intent-status"></div>
+                <div class="intent-content">
+                    <div class="intent-number">7. Solicitação de promoção</div>
+                    <div class="intent-description">Quando o cliente pede informações sobre promoções atuais.</div>
+                </div>
+                <div class="intent-arrow">›</div>
+            </li>
+            <li class="intent-item" data-intent="resposta_existe_cupom">
+                <div class="intent-status"></div>
+                <div class="intent-content">
+                    <div class="intent-number">8. Solicitação de Cupom</div>
+                    <div class="intent-description">Quando o cliente pede um cupom de desconto.</div>
+                </div>
+                <div class="intent-arrow">›</div>
+            </li>
+            <li class="intent-item" data-intent="resposta_sem_desconto">
+                <div class="intent-status"></div>
+                <div class="intent-content">
+                    <div class="intent-number">10. Sem Promoção/Cupom</div>
+                    <div class="intent-description">Resposta para o cliente quando não há promoções ou cupons disponíveis.</div>
+                </div>
+                <div class="intent-arrow">›</div>
+            </li>
+            <li class="intent-item" data-intent="resposta_audio">
+                <div class="intent-status"></div>
+                <div class="intent-content">
+                    <div class="intent-number">11. Áudio</div>
+                    <div class="intent-description">Quando o cliente envia uma mensagem de áudio em vez de texto.</div>
+                </div>
+                <div class="intent-arrow">›</div>
+            </li>
+            <li class="intent-item" data-intent="resposta_endereco_telefone">
+                <div class="intent-status"></div>
+                <div class="intent-content">
+                    <div class="intent-number">12. Solicitação de Endereço/Telefone</div>
+                    <div class="intent-description">Quando o cliente pede o endereço ou telefone do restaurante.</div>
+                </div>
+                <div class="intent-arrow">›</div>
+            </li>
+            <li class="intent-item" data-intent="resposta_taxa_delivery_ativo">
+                <div class="intent-status"></div>
+                <div class="intent-content">
+                    <div class="intent-number">13. Taxa de entrega (Delivery ativado)</div>
+                    <div class="intent-description">Quando o cliente pergunta sobre a taxa de entrega e o delivery está ativado.</div>
+                </div>
+                <div class="intent-arrow">›</div>
+            </li>
+            <li class="intent-item" data-intent="resposta_taxa_delivery_inativo">
+                <div class="intent-status"></div>
+                <div class="intent-content">
+                    <div class="intent-number">14. Taxa de entrega (Delivery desativado)</div>
+                    <div class="intent-description">Quando o cliente pergunta sobre a taxa de entrega e o delivery está desativado.</div>
+                </div>
+                <div class="intent-arrow">›</div>
+            </li>
+            <li class="intent-item" data-intent="resposta_taxa_bairro">
+                <div class="intent-status"></div>
+                <div class="intent-content">
+                    <div class="intent-number">15. Taxa de entrega por bairro</div>
+                    <div class="intent-description">Quando o cliente pergunta as taxas de entrega do restaurante e o mesmo trabalha com bairros de entrega.</div>
+                </div>
+                <div class="intent-arrow">›</div>
+            </li>
+            <li class="intent-item" data-intent="resposta_fidelidade">
+                <div class="intent-status"></div>
+                <div class="intent-content">
+                    <div class="intent-number">16. Programa de fidelidade</div>
+                    <div class="intent-description">Quando o cliente pede informações sobre o programa de fidelidade do restaurante.</div>
+                </div>
+                <div class="intent-arrow">›</div>
+            </li>
+            <li class="intent-item" data-intent="resposta_sem_fidelidade">
+                <div class="intent-status"></div>
+                <div class="intent-content">
+                    <div class="intent-number">17. Sem programa de fidelidade</div>
+                    <div class="intent-description">Resposta para quando não há programa de fidelidade.</div>
+                </div>
+                <div class="intent-arrow">›</div>
+            </li>
+            <li class="intent-item" data-intent="resposta_horarios">
+                <div class="intent-status"></div>
+                <div class="intent-content">
+                    <div class="intent-number">18. Horário de atendimento</div>
+                    <div class="intent-description">Quando o cliente pede informações sobre quanto tempo levará para seu pedido ser preparado e entregue.</div>
+                </div>
+                <div class="intent-arrow">›</div>
+            </li>
+            <li class="intent-item" data-intent="resposta_forma_pagamento">
+                <div class="intent-status"></div>
+                <div class="intent-content">
+                    <div class="intent-number">19. Forma de pagamento</div>
+                    <div class="intent-description">Quando o cliente pergunta sobre as formas de pagamento aceitas pelo restaurante.</div>
+                </div>
+                <div class="intent-arrow">›</div>
+            </li>
+            <li class="intent-item" data-intent="resposta_loja_fechada">
+                <div class="intent-status"></div>
+                <div class="intent-content">
+                    <div class="intent-number">20. Loja fechada</div>
+                    <div class="intent-description">Resposta para quando a loja está atualmente fechada.</div>
+                </div>
+                <div class="intent-arrow">›</div>
+            </li>
+            <li class="intent-item" data-intent="resposta_opcoes_entrega">
+                <div class="intent-status"></div>
+                <div class="intent-content">
+                    <div class="intent-number">21. Opções de entrega/retirada</div>
+                    <div class="intent-description">Quando o cliente pergunta sobre as opções disponíveis para entrega ou retirada de pedidos.</div>
+                </div>
+                <div class="intent-arrow">›</div>
+            </li>
+            <li class="intent-item" data-intent="resposta_nao_entendeu">
+                <div class="intent-status"></div>
+                <div class="intent-content">
+                    <div class="intent-number">22. Não entendeu a solicitação</div>
+                    <div class="intent-description">Mensagem enviada quando o robo não entendeu a solicitação</div>
+                </div>
+                <div class="intent-arrow">›</div>
+            </li>
+            <li class="intent-item" data-intent="resposta_sem_resposta">
+                <div class="intent-status"></div>
+                <div class="intent-content">
+                    <div class="intent-number">23. Não responder</div>
+                    <div class="intent-description">Mensagem enviada quando o robô fizer uma pergunta e o cliente não responder dentro de 10 minutos.</div>
+                </div>
+                <div class="intent-arrow">›</div>
+            </li>
+            <!-- Add more intent items following the same pattern -->
+        </ul>
+
+        <div class="divider-intent">
+            <h2 class="divider-intent-title">   Atualizações de status | Pedido</h2>
+        </div>
+    
+        <ul class="intent-list">
+            <li class="intent-item" data-intent="mensagem_pronto">
+                <div class="intent-status"></div>
+                <div class="intent-content">
+                    <div class="intent-number">01. Pedido pronto</div>
+                    <div class="intent-description">Notifica o cliente de que o pedido está pronto</div>
+                </div>
+                <div class="intent-arrow">›</div>
+            </li>
+            <li class="intent-item" data-intent="mensagem_solicitando_entregador">
+                <div class="intent-status"></div>
+                <div class="intent-content">
+                    <div class="intent-number">02. Solicitando entregador</div>
+                    <div class="intent-description">Notifica o cliente de que o pedido está aguardando a retirada por um entregador</div>
+                </div>
+                <div class="intent-arrow">›</div>
+            </li>
+            <li class="intent-item" data-intent="mensagem_entregando">
+                <div class="intent-status"></div>
+                <div class="intent-content">
+                    <div class="intent-number">03. Entregador em rota</div>
+                    <div class="intent-description">Notifica o cliente de que o pedido está a caminho</div>
+                </div>
+                <div class="intent-arrow">›</div>
+            </li>
+            <li class="intent-item" data-intent="mensagem_finalizado">
+                <div class="intent-status"></div>
+                <div class="intent-content">
+                    <div class="intent-number">04. Pedido finalizado</div>
+                    <div class="intent-description">Notifica o cliente de que o pedido foi finalizado</div>
+                </div>
+                <div class="intent-arrow">›</div>
+            </li>
+            <li class="intent-item" data-intent="mensagem_retirada">
+                <div class="intent-status"></div>
+                <div class="intent-content">
+                    <div class="intent-number">05. Pronto para retirada</div>
+                    <div class="intent-description">Notifica o cliente de que o pedido está pronto para ser retirado</div>
+                </div>
+                <div class="intent-arrow">›</div>
+            </li>
+            <li class="intent-item" data-intent="mensagem_pedido_aceito">
+                <div class="intent-status"></div>
+                <div class="intent-content">
+                    <div class="intent-number">06. Pedido aceito</div>
+                    <div class="intent-description">Notifica o cliente de que o pedido foi aceito</div>
+                </div>
+                <div class="intent-arrow">›</div>
+            </li>
+            <li class="intent-item" data-intent="mensagem_pedido_recusado">
+                <div class="intent-status"></div>
+                <div class="intent-content">
+                    <div class="intent-number">07. Pedido recusado</div>
+                    <div class="intent-description">Notifica o cliente de que o pedido foi recusado</div>
+                </div>
+                <div class="intent-arrow">›</div>
+            </li>
+        </ul>
+
+        <!-- Sliding Panel -->
+        <div class="sliding-panel">
+            <div class="panel-header">
+                <button class="back-button">‹</button>
+                <div class="panel-title">Configurar Intenção</div>
+            </div>
+            <div class="message-intent-container">
+                <div class="form-group">
+                    <div class="form-title" id="intent-name">Ex: Mensagem inicial</div>
+                    <div class="form-description" id="intent-description">Ex: Esta será a primeira resposta do robô em uma nova conversa</div>
+                </div>
+
+                <div class="form-group">
+                    <label for="message-content">Mensagem</label>
+                    <textarea id="message-content" class="form-control message-textarea" placeholder="Digite a mensagem aqui..."></textarea>
+                    <div class="character-count">0/400</div>
+                </div>                
+
+                <div class="variables-container">
+                    <div class="variables-grid">
+                        <button class="variable-btn">+ Nome cliente</button>
+                        <button class="variable-btn">+ Nome Loja</button>
+                        <button class="variable-btn">+ Telefone</button>
+                        <button class="variable-btn">+ Lista Opções</button>
+                        <button class="variable-btn">+ Número do pedido</button>
+                        <button class="variable-btn">+ Status do pedido</button>
+                        <button class="variable-btn">+ Lista de cupons</button>
+                        <button class="variable-btn">+ Taxa por bairros</button>
+                        <button class="variable-btn">+ Link do cardápio</button>
+                        <button class="variable-btn">+ Horários</button>
+                        <button class="variable-btn">+ Promoções</button>
+                        <button class="variable-btn">+ Formas de pagamento</button>
+                    </div>
+                </div>
+
+                <div class="message-preview">
+                    <div class="preview-container">
+                        <div class="preview-message">
+                            <div id="preview-content" class="preview-content">
+                                Olá! Este é o nosso autoatendimento! 🤖
+                            </div>
+                            <span class="preview-time">10:00</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="toggle-container">
+                        <label for="intent-status" class="toggle-label">Status da Intenção</label>
+                        <label class="switch">
+                            <input type="checkbox" id="intent-status">
+                            <span class="slider"></span>
+                        </label>
+                        <span id="status-text" class="status-text">Ativada</span>
+                    </div>
+
+                    <div class="btn-container">
+                        <button id="btn-salvar-mensagem" class="btn-confirmar">Salvar</button>
+                    </div>
+                </div>
+            </div>
+        </div>    
+    </div>
+    
+</div>
+
+<script>
+    // Alternância entre abas
+    function initTabSwitcher() {
+        document.querySelectorAll(".tab-button").forEach(button => {
+            button.removeEventListener("click", tabClickHandler); // Remove event listener existente, se houver
+            button.addEventListener("click", tabClickHandler);
+        });
+    }
+
+    function tabClickHandler(event) {
+        document.querySelectorAll(".tab-button").forEach(btn => btn.classList.remove("active"));
+        document.querySelectorAll(".tab-content").forEach(tab => tab.classList.remove("active"));
+
+        event.target.classList.add("active");
+        document.getElementById(event.target.dataset.tab).classList.add("active");
+    }
+
+    // Script para salvar configurações
+    function initSaveConfigurations() {
+        const btnConfirmar = document.getElementById('btn-confirmar');
+        if (btnConfirmar) {
+            btnConfirmar.removeEventListener('click', saveConfigurations); // Remove listener anterior
+            btnConfirmar.addEventListener('click', saveConfigurations);
+        }
+    }
+
+    function saveConfigurations() {
+        const portaServidor = document.getElementById('porta-servidor').value;
+        const ambiente = document.getElementById('ambiente').value;
+
+        alert(`Configurações salvas!\nPorta: ${portaServidor}\nAmbiente: ${ambiente}\nTempo de entrega: ${tempoEntrega} min\nRaio de entrega: ${raioEntrega} km`);
+    }
+
+    // Character count for message textarea
+    function initCharacterCount() {
+        const messageTextarea = document.getElementById('message-content');
+        const charCount = document.querySelector('.character-count');
+        
+        if (messageTextarea) {
+            messageTextarea.removeEventListener('input', characterCountHandler);
+            messageTextarea.addEventListener('input', characterCountHandler);
+        }
+
+        function characterCountHandler() {
+            const count = this.value.length;
+            charCount.textContent = `${count}/400`;
+            
+            if (count > 400) {
+                charCount.style.color = '#dc3545';
+            } else {
+                charCount.style.color = '#667781';
+            }
+        }
+    }
+
+    // Variable buttons
+    function initVariableButtons() {
+        const variableButtons = document.querySelectorAll('.variable-btn');
+        variableButtons.forEach(btn => {
+            btn.removeEventListener('click', variableButtonClickHandler); // Remove previous event listener
+            btn.addEventListener('click', variableButtonClickHandler);
+        });
+
+        function variableButtonClickHandler() {
+            const messageTextarea = document.getElementById('message-content');
+            const variable = this.textContent.replace('+ ', '');
+            messageTextarea.value += ` {${variable}}`;
+            messageTextarea.dispatchEvent(new Event('input'));
+        }
+    }
+
+    // Toggle switch
+    function initToggleSwitch() {
+        const toggleSwitch = document.getElementById('intent-status');
+        const statusText = document.querySelector('.status-text');
+        
+        if (toggleSwitch) {
+            toggleSwitch.removeEventListener('change', toggleSwitchHandler); // Remove previous event listener
+            toggleSwitch.addEventListener('change', toggleSwitchHandler);
+        }
+
+        function toggleSwitchHandler() {
+            statusText.textContent = this.checked ? 'Ativada' : 'Desativada';
+            statusText.style.color = this.checked ? '#008069' : '#667781';
+        }
+    }
+
+    // Intent item click handling
+    function initIntentItemClicks() {
+        const intentItems = document.querySelectorAll('.intent-item');
+        const slidingPanel = document.querySelector('.sliding-panel');
+        const backButton = document.querySelector('.back-button');
+
+        intentItems.forEach(item => {
+            item.removeEventListener('click', intentItemClickHandler); // Remove previous event listener
+            item.addEventListener('click', intentItemClickHandler);
+        });
+
+        function intentItemClickHandler() {
+            slidingPanel.classList.add('active');
+            const intentId = this.getAttribute('data-intent');
+            console.log('Loading intent:', intentId);
+        }
+
+        backButton.removeEventListener('click', backButtonClickHandler);
+        backButton.addEventListener('click', backButtonClickHandler);
+
+        function backButtonClickHandler() {
+            slidingPanel.classList.remove('active');
+        }
+    }
+
+    function initSaveMessageHandler() {
+        const btnSalvarMensagem = document.getElementById('btn-salvar-mensagem');
+
+        btnSalvarMensagem.removeEventListener('click', saveMessageHandler); // Remove evento anterior
+        btnSalvarMensagem.addEventListener('click', saveMessageHandler);
+
+        function saveMessageHandler() {
+            const messageContent = document.getElementById('message-content').value;
+            const intentStatus = document.getElementById('intent-status').checked;
+
+            // Obtém o item selecionado
+            const selectedIntentItem = document.querySelector('.intent-item.selected');
+
+            if (!selectedIntentItem) {
+                notyf.error('Nenhuma intenção selecionada!');
+                return;
+            }
+
+            const intentKey = selectedIntentItem.dataset.intent; // Pega o identificador da intenção
+
+            // Obtém o nome e a descrição da intenção
+            const intentName = selectedIntentItem.querySelector('.intent-number').textContent;
+            const intentDescription = selectedIntentItem.querySelector('.intent-description').textContent;
+
+            const intentData = {
+                id: intentKey, // Inclui o ID da intenção no objeto
+                name: intentName,
+                description: intentDescription,
+                message: messageContent,
+                status: intentStatus
+            };
+
+            // Salvar no electron-store via IPC
+            window.saveIntentData(intentData).then(response => {  // Passando intentData diretamente
+                updateIntentStatuses();
+                notyf.success('Mensagem salva com sucesso!');
+                document.querySelector('.back-button')?.click();
+
+            }).catch(error => {
+                console.error('Erro ao salvar a mensagem:', error);
+                notyf.error('Erro ao salvar a mensagem:', error);
+            });
+        }
+    }
+
+    function initIntentItemClicks() {
+        const intentItems = document.querySelectorAll('.intent-item');
+        const slidingPanel = document.querySelector('.sliding-panel');
+
+        intentItems.forEach(item => {
+            item.removeEventListener('click', intentItemClickHandler);
+            item.addEventListener('click', intentItemClickHandler);
+        });
+
+        function intentItemClickHandler() {
+            document.querySelectorAll('.intent-item').forEach(i => i.classList.remove('selected'));
+            this.classList.add('selected');
+
+            const intentKey = this.dataset.intent;
+
+            // Pegar o número e a descrição do item
+            const intentNumber = this.querySelector('.intent-number').innerText;
+            const intentDescription = this.querySelector('.intent-description').innerText;
+            const statusText = document.querySelector('.status-text');
+
+            document.getElementById('intent-name').innerText = intentNumber;
+            document.getElementById('intent-description').innerText = intentDescription;
+
+            // Usando as funções diretamente do window
+            window.getIntentData(intentKey).then(response => {
+                //console.log('Chave buscada: ', intentKey);
+                //console.log(response.intentData); // Acessa o objeto de dados da intenção
+
+                if (response.success && response.intentData) {
+                    const savedIntentData = response.intentData;
+                    document.getElementById('message-content').value = savedIntentData.message || '';
+                    document.getElementById('preview-content').innerText = savedIntentData.message || '';
+                    document.getElementById('intent-status').checked = savedIntentData.status || false;
+                } else {
+                    document.getElementById('message-content').value = '';
+                    document.getElementById('intent-status').checked = false;
+                    document.getElementById('preview-content').innerText = '';
+                }
+
+                statusText.textContent = document.getElementById('intent-status').checked ? 'Ativada' : 'Desativada';
+                statusText.style.color = document.getElementById('intent-status').checked ? '#008069' : '#667781';
+                slidingPanel.classList.add('active');
+            }).catch(error => {
+                console.error('Erro ao recuperar dados:', error);
+            });
+        }
+    }
+
+    function initIntentBackButton() {
+        const slidingPanel = document.querySelector('.sliding-panel');
+        const backButton = document.querySelector('.back-button');
+
+        backButton.removeEventListener('click', backButtonClickHandler);
+        backButton.addEventListener('click', backButtonClickHandler);
+        function backButtonClickHandler() {
+            slidingPanel.classList.remove('active');
+        }
+    }
+
+    function initPreviewMessage() {
+        const messageContent= document.getElementById('message-content');;
+        const previewContent = document.getElementById('preview-content');
+
+        messageContent.removeEventListener('input', fillPreviewContent);
+        messageContent.addEventListener('input', fillPreviewContent);
+        function fillPreviewContent() {
+            previewContent.innerText = messageContent.value;
+        }
+    }
+
+    function updateIntentStatuses() {
+        // Pegar todos os itens de intenção
+        const intentItems = document.querySelectorAll('.intent-item');
+
+        // Iterar sobre cada item
+        intentItems.forEach(item => {
+            const intentKey = item.dataset.intent; // Pega o valor do atributo data-intent
+
+            // Usar a função getIntentData para buscar o status da intenção
+            window.getIntentData(intentKey).then(response => {
+                const intentStatusElement = item.querySelector('.intent-status'); // A div do status dentro do item
+
+                if (response.success && response.intentData) {
+
+                    // Se os dados forem encontrados, verificar o status
+                    const savedIntents = response.intentData;
+                    const isActive = savedIntents.status || false;
+
+                    // Atualizar a cor do status de acordo com o status da intenção
+                    if (isActive) {
+                        intentStatusElement.classList.remove('inactive'); // Ativa
+                        intentStatusElement.style.backgroundColor = '#00a884'; // Verde
+                    } else {
+                        intentStatusElement.classList.add('inactive'); // Inativa
+                        intentStatusElement.style.backgroundColor = '#ccc'; // Cinza
+                    }
+                } else {
+                    // Caso não existam dados, definir o status como inativo
+                    intentStatusElement.classList.add('inactive');
+                    intentStatusElement.style.backgroundColor = '#ccc'; // Cinza
+                }
+            }).catch(error => {
+                console.error('Erro ao recuperar dados:', error);
+            });
+        });
+    }
+
+    async function initSaveConfigHandler() {
+        const btnConfirmar = document.getElementById('btn-confirmar');
+
+        // Carregar configurações salvas ao iniciar
+        const savedConfig = await window.getConfig();
+        if (savedConfig) {
+            document.getElementById('porta-node').value = savedConfig.portaNode || '';
+            document.getElementById('ambiente').value = savedConfig.ambiente || '';
+            document.getElementById('porta-aquipede').value = savedConfig.portaAquiPede || '';
+            document.getElementById('link-delivery').value = savedConfig.linkDelivery || '';
+            document.getElementById('email-delivery').value = savedConfig.emailDelivery || '';
+            document.getElementById('nome-delivery').value = savedConfig.nomeDelivery || '';
+        }
+        
+        // Evitar múltiplos eventos duplicados
+        btnConfirmar.replaceWith(btnConfirmar.cloneNode(true));
+        const btnNovo = document.getElementById('btn-confirmar');
+
+        // Evento para salvar configurações
+        btnNovo.addEventListener('click', async () => {
+            const configData = {
+                portaNode: document.getElementById('porta-node').value,
+                ambiente: document.getElementById('ambiente').value,
+                portaAquiPede: document.getElementById('porta-aquipede').value,
+                linkDelivery: document.getElementById('link-delivery').value,
+                emailDelivery: document.getElementById('email-delivery').value,
+                nomeDelivery: document.getElementById('nome-delivery').value
+            };
+
+            const response = await window.saveConfig(configData);
+            notyf.success(response); // 'Configuração salva com sucesso!'
+        });
+    }
+
+    // Chame essas funções quando necessário (por exemplo, após carregar o conteúdo)
+    function initScripts() {
+        initTabSwitcher();
+        initSaveConfigurations();
+        initCharacterCount();
+        initVariableButtons();
+        initToggleSwitch();
+        initIntentItemClicks();
+        initSaveMessageHandler();
+        initIntentBackButton();
+        initPreviewMessage();
+        initSaveConfigHandler();
+    }
+
+    // Chame a função para inicializar o script após carregar o conteúdo
+    initScripts();
+    updateIntentStatuses();
+</script>
