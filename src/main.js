@@ -47,7 +47,7 @@ app.whenReady().then(() => {
     Menu.setApplicationMenu(null); // Esconder o menu superior
     InitializeChatBot(store);
 
-    //mainWindow.webContents.openDevTools();
+    mainWindow.webContents.openDevTools();
 });
 
 ipcMain.handle('get-history', () => {

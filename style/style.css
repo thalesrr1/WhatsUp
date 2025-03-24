@@ -33,7 +33,7 @@
     --border-color: #9FA2A7;
   /* Variaveis cor card */
     --card-bg: #2e4052;
-    --color-input:  #3c4f63;
+    --color-input:  #3c4f63;   /* Variaveis background input*/
   }
 
   /* Corpo da página */
@@ -43,6 +43,11 @@
     height: 100vh;
     background-color: var(--color-bg-main);
     overflow: hidden;
+  }
+
+  input {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--color-text-primary);
   }
 
   h2 {
