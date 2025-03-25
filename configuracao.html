@@ -5,6 +5,10 @@
         --primary-hover: #008f6e;
         --bg-color: #f8f9fa;
         --card-bg: #ffffff;
+        --text-primary: #111b21;
+        --text-secondary: #667781;
+        --text-primary: #111b21;
+        --text-secondary: #667781;
         --border-color: #e9edef;
         --color-input:  #FFFFFF;
         --input-focus: rgba(0, 168, 132, 0.15);
@@ -155,7 +159,7 @@
         transition: var(--transition);
         pointer-events: none;
         background: var(--color-input);
-        border-radius: 20%;
+        border-radius: 15%;
         padding: 0 4px;
         z-index: 1;
     }
@@ -263,7 +267,7 @@
         display: flex;
         align-items: flex-start;
         padding: 16px 20px;
-        border-bottom: 1px solid var(--border-color); 
+        border-bottom: 1px solid var(--border-color);
         cursor: pointer;
         color: var(--color-text-primary);
         transition: background-color 0.2s;
@@ -342,13 +346,13 @@
         overflow-y: auto;
     }
 
-    #message-content {
-        color: var(--color-text-primary);
-    }
-
     .sliding-panel.active {
         right: 0;
         box-shadow: -5px 0 25px rgba(0, 0, 0, 0.1);
+    }
+    
+    #message-content {
+        color: var(--color-text-primary);
     }
 
     .panel-header {
