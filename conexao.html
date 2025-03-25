@@ -874,8 +874,9 @@
             if (status.status !== 'notLogged' || 
                 status.status !== 'qrReadSuccess' || 
                 status.status !== 'desconnectedMobile' || 
-                status.status !== 'isLogged' || status.status !== 'inChat'
-                || status.status !== 'isConnected') {
+                status.status !== 'isLogged' || 
+                status.status !== 'inChat' || 
+                status.status !== 'isConnected') {
                     document.getElementById('error-suggestion').textContent = latestError.suggestion;
                     document.getElementById('error-suggestion').style.display = 'block';
                 }
