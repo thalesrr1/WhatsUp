@@ -14,6 +14,9 @@
     <link rel="icon" href="icon.ico" type="image/x-icon">
 </head>
 <body>
+    <!-- Container para os toasts de inicialização -->
+    <div id="toast-container" class="toast-container"></div>
+
     <div class="sidebar" id="sidebar">
         <div class="sidebar-header">
             <h2>Servidor WPP</h2>
@@ -74,8 +77,8 @@
         </div>
     </div>
 
-
     <script src="src/renderer.js"></script>
+
     <script>
         document.addEventListener("DOMContentLoaded", () => {
             const themeButton = document.getElementById("theme-toggle");
@@ -97,8 +100,8 @@
                 themeIcon.setAttribute("name", newTheme === "dark-mode" ? "moon-outline" : "sunny-outline");
 
                 localStorage.setItem("theme", newTheme);
-    });
-});
+                });
+            });
 
         document.addEventListener("DOMContentLoaded", async () => {
             // Elementos do popup de configuração
@@ -154,8 +157,6 @@
             })
     
         })
-
-
     </script>
     
 </body>
