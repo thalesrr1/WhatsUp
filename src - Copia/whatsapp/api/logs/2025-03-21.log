@@ -1,0 +1,1597 @@
+=== ERROR LOG ===
+[2025-03-21T00:00:34.645Z] Error: Failed to launch the browser process! undefined
+
+
+TROUBLESHOOTING: https://pptr.dev/troubleshooting
+
+    at ChildProcess.onClose (C:\electron-wpp-server\node_modules\@puppeteer\browsers\lib\cjs\launch.js:318:24)
+    at ChildProcess.emit (node:events:530:35)
+    at ChildProcess._handle.onexit (node:internal/child_process:293:12)
+[2025-03-21T11:46:10.931Z] ReferenceError: window is not defined
+    at file:///C:/electron-wpp-server/src/main.js:27:21
+    at ModuleJob.run (node:internal/modules/esm/module_job:234:25)
+    at async ModuleLoader.import (node:internal/modules/esm/loader:473:24)
+    at async loadApplicationPackage (file:///C:/electron-wpp-server/node_modules/electron/dist/resources/default_app.asar/main.js:127:9)
+    at async file:///C:/electron-wpp-server/node_modules/electron/dist/resources/default_app.asar/main.js:240:9
+[2025-03-21T11:56:34.513Z] TypeError: Cannot read properties of null (reading 'set')
+    at file:///C:/electron-wpp-server/src/main.js:36:7
+    at ModuleJob.run (node:internal/modules/esm/module_job:234:25)
+    at async ModuleLoader.import (node:internal/modules/esm/loader:473:24)
+    at async loadApplicationPackage (file:///C:/electron-wpp-server/node_modules/electron/dist/resources/default_app.asar/main.js:127:9)
+    at async file:///C:/electron-wpp-server/node_modules/electron/dist/resources/default_app.asar/main.js:240:9
+[2025-03-21T11:58:08.699Z] ReferenceError: config is not defined
+    at file:///C:/electron-wpp-server/src/main.js:12:17
+    at ModuleJob.run (node:internal/modules/esm/module_job:234:25)
+    at async ModuleLoader.import (node:internal/modules/esm/loader:473:24)
+    at async loadApplicationPackage (file:///C:/electron-wpp-server/node_modules/electron/dist/resources/default_app.asar/main.js:127:9)
+    at async file:///C:/electron-wpp-server/node_modules/electron/dist/resources/default_app.asar/main.js:240:9
+[2025-03-21T11:59:03.382Z] TypeError: Setting a value of type `function` for key `_deserialize` is not allowed as it's not supported by JSON
+    at checkValueType (file:///C:/electron-wpp-server/node_modules/conf/dist/source/index.js:29:15)
+    at set (file:///C:/electron-wpp-server/node_modules/conf/dist/source/index.js:135:13)
+    at ElectronStore.set (file:///C:/electron-wpp-server/node_modules/conf/dist/source/index.js:146:17)
+    at file:///C:/electron-wpp-server/src/main.js:36:7
+    at ModuleJob.run (node:internal/modules/esm/module_job:234:25)
+    at async ModuleLoader.import (node:internal/modules/esm/loader:473:24)
+    at async loadApplicationPackage (file:///C:/electron-wpp-server/node_modules/electron/dist/resources/default_app.asar/main.js:127:9)
+    at async file:///C:/electron-wpp-server/node_modules/electron/dist/resources/default_app.asar/main.js:240:9
+[2025-03-21T11:59:37.586Z] TypeError: Setting a value of type `function` for key `_deserialize` is not allowed as it's not supported by JSON
+    at checkValueType (file:///C:/electron-wpp-server/node_modules/conf/dist/source/index.js:29:15)
+    at set (file:///C:/electron-wpp-server/node_modules/conf/dist/source/index.js:135:13)
+    at ElectronStore.set (file:///C:/electron-wpp-server/node_modules/conf/dist/source/index.js:146:17)
+    at file:///C:/electron-wpp-server/src/main.js:36:7
+    at ModuleJob.run (node:internal/modules/esm/module_job:234:25)
+    at async ModuleLoader.import (node:internal/modules/esm/loader:473:24)
+    at async loadApplicationPackage (file:///C:/electron-wpp-server/node_modules/electron/dist/resources/default_app.asar/main.js:127:9)
+    at async file:///C:/electron-wpp-server/node_modules/electron/dist/resources/default_app.asar/main.js:240:9
+[2025-03-21T14:11:02.043Z] [2025-03-21T14:11:02.037Z] [WPPCONNECT] Problema de status do WhatsApp: desconnectedMobile
+
+[2025-03-21T14:19:18.989Z] Error: Attempted to register a second handler for 'get-connection-status'
+    at IpcMainImpl.handle (node:electron/js2c/browser_init:2:104552)
+    at file:///C:/electron-wpp-server/src/whatsapp/api/client.js:728:9
+    at ModuleJob.run (node:internal/modules/esm/module_job:234:25)
+    at async ModuleLoader.import (node:internal/modules/esm/loader:473:24)
+    at async loadApplicationPackage (file:///C:/electron-wpp-server/node_modules/electron/dist/resources/default_app.asar/main.js:127:9)
+    at async file:///C:/electron-wpp-server/node_modules/electron/dist/resources/default_app.asar/main.js:240:9
+[2025-03-21T14:20:35.364Z] [2025-03-21T14:20:35.364Z] [WPPCONNECT] Problema de status do WhatsApp: desconnectedMobile
+
+[2025-03-21T14:27:49.068Z] [2025-03-21T14:27:49.066Z] [WPPCONNECT] Problema de status do WhatsApp: desconnectedMobile
+
+[2025-03-21T14:53:33.725Z] [2025-03-21T14:53:33.723Z] [WPPCONNECT] Problema de status do WhatsApp: desconnectedMobile
+
+[2025-03-21T15:00:24.773Z] [2025-03-21T15:00:24.772Z] [WPPCONNECT] Problema de status do WhatsApp: desconnectedMobile
+
+[2025-03-21T15:03:32.114Z] [2025-03-21T15:03:32.114Z] [WPPCONNECT] Problema de status do WhatsApp: desconnectedMobile
+
+[2025-03-21T15:05:26.800Z] [2025-03-21T15:05:26.798Z] [WPPCONNECT] Problema de status do WhatsApp: desconnectedMobile
+
+[2025-03-21T15:08:54.449Z] [2025-03-21T15:08:54.448Z] [WPPCONNECT] Problema de status do WhatsApp: desconnectedMobile
+
+[2025-03-21T15:24:51.461Z] [2025-03-21T15:24:51.459Z] [QR_CODE] O QR Code foi gerado, mas o celular está desconectado. Conecte o WhatsApp no celular e tente novamente.
+
+[2025-03-21T15:24:55.440Z] [2025-03-21T15:24:55.439Z] [WPPCONNECT] Não foi possível fazer login. Verifique a conexão do WhatsApp no celular e tente novamente.
+
+[2025-03-21T15:26:57.792Z] [2025-03-21T15:26:57.791Z] [QR_CODE] O QR Code foi gerado, mas o celular está desconectado. Conecte o WhatsApp no celular e tente novamente.
+
+[2025-03-21T15:27:04.776Z] [2025-03-21T15:27:04.776Z] [WPPCONNECT] Não foi possível fazer login. Verifique a conexão do WhatsApp no celular e tente novamente.
+
+[2025-03-21T16:02:59.222Z] [2025-03-21T16:02:59.220Z] [QR_CODE] O QR Code foi gerado, mas o celular está desconectado. Conecte o WhatsApp no celular e tente novamente.
+
+[2025-03-21T16:03:04.833Z] [2025-03-21T16:03:04.833Z] [QR_CODE] Nenhuma sessão foi encontrada, por favor leia o QR-Code para conectar o Whatsapp.
+
+[2025-03-21T16:19:57.623Z] [2025-03-21T16:19:57.622Z] [QR_CODE] O QR Code foi gerado, mas o celular está desconectado. Conecte o WhatsApp no celular e tente novamente.
+
+[2025-03-21T16:19:58.861Z] [2025-03-21T16:19:58.860Z] [QR_CODE] Nenhuma sessão foi encontrada, por favor leia o QR-Code para conectar o Whatsapp.
+
+[2025-03-21T16:23:07.405Z] [2025-03-21T16:23:07.405Z] [QR_CODE] O QR Code foi gerado, mas o celular está desconectado. Conecte o WhatsApp no celular e tente novamente.
+
+[2025-03-21T16:23:11.424Z] [2025-03-21T16:23:11.424Z] [QR_CODE] Nenhuma sessão foi encontrada, por favor leia o QR-Code para conectar o Whatsapp.
+
+[2025-03-21T16:35:02.683Z] [2025-03-21T16:35:02.681Z] [QR_CODE] O QR Code foi gerado, mas o celular está desconectado. Conecte o WhatsApp no celular e tente novamente.
+
+[2025-03-21T16:35:08.412Z] [2025-03-21T16:35:08.412Z] [QR_CODE] Nenhuma sessão foi encontrada, por favor leia o QR-Code para conectar o Whatsapp.
+
+[2025-03-21T17:12:48.047Z] [2025-03-21T17:12:48.045Z] [QR_CODE] O QR Code foi gerado, mas o celular está desconectado. Conecte o WhatsApp no celular e tente novamente.
+
+[2025-03-21T17:12:51.555Z] [2025-03-21T17:12:51.555Z] [QR_CODE] Nenhuma sessão foi encontrada, por favor leia o QR-Code para conectar o Whatsapp.
+
+[2025-03-21T17:23:07.234Z] [2025-03-21T17:23:07.232Z] [QR_CODE] O QR Code foi gerado, mas o celular está desconectado. Conecte o WhatsApp no celular e tente novamente.
+
+[2025-03-21T17:23:09.025Z] [2025-03-21T17:23:09.024Z] [QR_CODE] Nenhuma sessão foi encontrada, por favor leia o QR-Code para conectar o Whatsapp.
+
+[2025-03-21T20:29:28.912Z] [2025-03-21T20:29:28.875Z] [UNKNOWN] Erro ao verificar status: Cannot read properties of null (reading 'isConnected')
+TypeError: Cannot read properties of null (reading 'isConnected')
+    at StatusServerWpp (file:///C:/electron-wpp-server/src/whatsapp/api/client.js:428:45)
+    at file:///C:/electron-wpp-server/src/whatsapp/api/server.js:102:30
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\electron-wpp-server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\electron-wpp-server\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\electron-wpp-server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\index.js:280:10)
+    at jsonParser (C:\electron-wpp-server\node_modules\body-parser\lib\types\json.js:113:7)
+
+[2025-03-21T20:29:42.908Z] [2025-03-21T20:29:42.908Z] [QR_CODE] O QR Code foi gerado, mas o celular está desconectado. Conecte o WhatsApp no celular e tente novamente.
+
+[2025-03-21T20:29:43.864Z] [2025-03-21T20:29:43.863Z] [UNKNOWN] Erro ao verificar status: Cannot read properties of null (reading 'isConnected')
+TypeError: Cannot read properties of null (reading 'isConnected')
+    at StatusServerWpp (file:///C:/electron-wpp-server/src/whatsapp/api/client.js:428:45)
+    at file:///C:/electron-wpp-server/src/whatsapp/api/server.js:102:30
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\electron-wpp-server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\electron-wpp-server\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\electron-wpp-server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\index.js:280:10)
+    at jsonParser (C:\electron-wpp-server\node_modules\body-parser\lib\types\json.js:113:7)
+
+[2025-03-21T20:29:44.173Z] [2025-03-21T20:29:44.172Z] [QR_CODE] Nenhuma sessão foi encontrada, por favor leia o QR-Code para conectar o Whatsapp.
+
+[2025-03-21T20:29:58.745Z] [2025-03-21T20:29:58.744Z] [UNKNOWN] Erro ao verificar status: Cannot read properties of null (reading 'isConnected')
+TypeError: Cannot read properties of null (reading 'isConnected')
+    at StatusServerWpp (file:///C:/electron-wpp-server/src/whatsapp/api/client.js:428:45)
+    at file:///C:/electron-wpp-server/src/whatsapp/api/server.js:102:30
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\electron-wpp-server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\electron-wpp-server\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\electron-wpp-server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\index.js:280:10)
+    at jsonParser (C:\electron-wpp-server\node_modules\body-parser\lib\types\json.js:113:7)
+
+[2025-03-21T20:30:13.973Z] [2025-03-21T20:30:13.972Z] [UNKNOWN] Erro ao verificar status: Cannot read properties of null (reading 'isConnected')
+TypeError: Cannot read properties of null (reading 'isConnected')
+    at StatusServerWpp (file:///C:/electron-wpp-server/src/whatsapp/api/client.js:428:45)
+    at file:///C:/electron-wpp-server/src/whatsapp/api/server.js:102:30
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\electron-wpp-server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\electron-wpp-server\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\electron-wpp-server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\index.js:280:10)
+    at jsonParser (C:\electron-wpp-server\node_modules\body-parser\lib\types\json.js:113:7)
+
+[2025-03-21T20:30:28.792Z] [2025-03-21T20:30:28.791Z] [UNKNOWN] Erro ao verificar status: Cannot read properties of null (reading 'isConnected')
+TypeError: Cannot read properties of null (reading 'isConnected')
+    at StatusServerWpp (file:///C:/electron-wpp-server/src/whatsapp/api/client.js:428:45)
+    at file:///C:/electron-wpp-server/src/whatsapp/api/server.js:102:30
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\electron-wpp-server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\electron-wpp-server\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\electron-wpp-server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\index.js:280:10)
+    at jsonParser (C:\electron-wpp-server\node_modules\body-parser\lib\types\json.js:113:7)
+
+[2025-03-21T20:30:43.777Z] [2025-03-21T20:30:43.777Z] [UNKNOWN] Erro ao verificar status: Cannot read properties of null (reading 'isConnected')
+TypeError: Cannot read properties of null (reading 'isConnected')
+    at StatusServerWpp (file:///C:/electron-wpp-server/src/whatsapp/api/client.js:428:45)
+    at file:///C:/electron-wpp-server/src/whatsapp/api/server.js:102:30
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\electron-wpp-server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\electron-wpp-server\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\electron-wpp-server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\index.js:280:10)
+    at jsonParser (C:\electron-wpp-server\node_modules\body-parser\lib\types\json.js:113:7)
+
+[2025-03-21T20:30:58.777Z] [2025-03-21T20:30:58.776Z] [UNKNOWN] Erro ao verificar status: Cannot read properties of null (reading 'isConnected')
+TypeError: Cannot read properties of null (reading 'isConnected')
+    at StatusServerWpp (file:///C:/electron-wpp-server/src/whatsapp/api/client.js:428:45)
+    at file:///C:/electron-wpp-server/src/whatsapp/api/server.js:102:30
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\electron-wpp-server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\electron-wpp-server\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\electron-wpp-server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\index.js:280:10)
+    at jsonParser (C:\electron-wpp-server\node_modules\body-parser\lib\types\json.js:113:7)
+
+[2025-03-21T20:31:13.781Z] [2025-03-21T20:31:13.780Z] [UNKNOWN] Erro ao verificar status: Cannot read properties of null (reading 'isConnected')
+TypeError: Cannot read properties of null (reading 'isConnected')
+    at StatusServerWpp (file:///C:/electron-wpp-server/src/whatsapp/api/client.js:428:45)
+    at file:///C:/electron-wpp-server/src/whatsapp/api/server.js:102:30
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\electron-wpp-server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\electron-wpp-server\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\electron-wpp-server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\index.js:280:10)
+    at jsonParser (C:\electron-wpp-server\node_modules\body-parser\lib\types\json.js:113:7)
+
+[2025-03-21T20:31:28.807Z] [2025-03-21T20:31:28.806Z] [UNKNOWN] Erro ao verificar status: Cannot read properties of null (reading 'isConnected')
+TypeError: Cannot read properties of null (reading 'isConnected')
+    at StatusServerWpp (file:///C:/electron-wpp-server/src/whatsapp/api/client.js:428:45)
+    at file:///C:/electron-wpp-server/src/whatsapp/api/server.js:102:30
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\electron-wpp-server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\electron-wpp-server\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\electron-wpp-server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\index.js:280:10)
+    at jsonParser (C:\electron-wpp-server\node_modules\body-parser\lib\types\json.js:113:7)
+
+[2025-03-21T20:31:43.810Z] [2025-03-21T20:31:43.810Z] [UNKNOWN] Erro ao verificar status: Cannot read properties of null (reading 'isConnected')
+TypeError: Cannot read properties of null (reading 'isConnected')
+    at StatusServerWpp (file:///C:/electron-wpp-server/src/whatsapp/api/client.js:428:45)
+    at file:///C:/electron-wpp-server/src/whatsapp/api/server.js:102:30
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\electron-wpp-server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\electron-wpp-server\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\electron-wpp-server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\index.js:280:10)
+    at jsonParser (C:\electron-wpp-server\node_modules\body-parser\lib\types\json.js:113:7)
+
+[2025-03-21T20:31:58.830Z] [2025-03-21T20:31:58.830Z] [UNKNOWN] Erro ao verificar status: Cannot read properties of null (reading 'isConnected')
+TypeError: Cannot read properties of null (reading 'isConnected')
+    at StatusServerWpp (file:///C:/electron-wpp-server/src/whatsapp/api/client.js:428:45)
+    at file:///C:/electron-wpp-server/src/whatsapp/api/server.js:102:30
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\electron-wpp-server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\electron-wpp-server\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\electron-wpp-server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\index.js:280:10)
+    at jsonParser (C:\electron-wpp-server\node_modules\body-parser\lib\types\json.js:113:7)
+
+[2025-03-21T20:32:13.822Z] [2025-03-21T20:32:13.821Z] [UNKNOWN] Erro ao verificar status: Cannot read properties of null (reading 'isConnected')
+TypeError: Cannot read properties of null (reading 'isConnected')
+    at StatusServerWpp (file:///C:/electron-wpp-server/src/whatsapp/api/client.js:428:45)
+    at file:///C:/electron-wpp-server/src/whatsapp/api/server.js:102:30
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\electron-wpp-server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\electron-wpp-server\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\electron-wpp-server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\index.js:280:10)
+    at jsonParser (C:\electron-wpp-server\node_modules\body-parser\lib\types\json.js:113:7)
+
+[2025-03-21T20:32:28.836Z] [2025-03-21T20:32:28.835Z] [UNKNOWN] Erro ao verificar status: Cannot read properties of null (reading 'isConnected')
+TypeError: Cannot read properties of null (reading 'isConnected')
+    at StatusServerWpp (file:///C:/electron-wpp-server/src/whatsapp/api/client.js:428:45)
+    at file:///C:/electron-wpp-server/src/whatsapp/api/server.js:102:30
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\electron-wpp-server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\electron-wpp-server\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\electron-wpp-server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\index.js:280:10)
+    at jsonParser (C:\electron-wpp-server\node_modules\body-parser\lib\types\json.js:113:7)
+
+[2025-03-21T20:32:43.864Z] [2025-03-21T20:32:43.863Z] [UNKNOWN] Erro ao verificar status: Cannot read properties of null (reading 'isConnected')
+TypeError: Cannot read properties of null (reading 'isConnected')
+    at StatusServerWpp (file:///C:/electron-wpp-server/src/whatsapp/api/client.js:428:45)
+    at file:///C:/electron-wpp-server/src/whatsapp/api/server.js:102:30
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\electron-wpp-server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\electron-wpp-server\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\electron-wpp-server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\index.js:280:10)
+    at jsonParser (C:\electron-wpp-server\node_modules\body-parser\lib\types\json.js:113:7)
+
+[2025-03-21T20:32:58.871Z] [2025-03-21T20:32:58.870Z] [UNKNOWN] Erro ao verificar status: Cannot read properties of null (reading 'isConnected')
+TypeError: Cannot read properties of null (reading 'isConnected')
+    at StatusServerWpp (file:///C:/electron-wpp-server/src/whatsapp/api/client.js:428:45)
+    at file:///C:/electron-wpp-server/src/whatsapp/api/server.js:102:30
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\electron-wpp-server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\electron-wpp-server\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\electron-wpp-server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\index.js:280:10)
+    at jsonParser (C:\electron-wpp-server\node_modules\body-parser\lib\types\json.js:113:7)
+
+[2025-03-21T20:33:13.880Z] [2025-03-21T20:33:13.879Z] [UNKNOWN] Erro ao verificar status: Cannot read properties of null (reading 'isConnected')
+TypeError: Cannot read properties of null (reading 'isConnected')
+    at StatusServerWpp (file:///C:/electron-wpp-server/src/whatsapp/api/client.js:428:45)
+    at file:///C:/electron-wpp-server/src/whatsapp/api/server.js:102:30
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\electron-wpp-server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\electron-wpp-server\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\electron-wpp-server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\index.js:280:10)
+    at jsonParser (C:\electron-wpp-server\node_modules\body-parser\lib\types\json.js:113:7)
+
+[2025-03-21T20:33:28.876Z] [2025-03-21T20:33:28.876Z] [UNKNOWN] Erro ao verificar status: Cannot read properties of null (reading 'isConnected')
+TypeError: Cannot read properties of null (reading 'isConnected')
+    at StatusServerWpp (file:///C:/electron-wpp-server/src/whatsapp/api/client.js:428:45)
+    at file:///C:/electron-wpp-server/src/whatsapp/api/server.js:102:30
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\electron-wpp-server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\electron-wpp-server\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\electron-wpp-server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\index.js:280:10)
+    at jsonParser (C:\electron-wpp-server\node_modules\body-parser\lib\types\json.js:113:7)
+
+[2025-03-21T20:33:43.879Z] [2025-03-21T20:33:43.878Z] [UNKNOWN] Erro ao verificar status: Cannot read properties of null (reading 'isConnected')
+TypeError: Cannot read properties of null (reading 'isConnected')
+    at StatusServerWpp (file:///C:/electron-wpp-server/src/whatsapp/api/client.js:428:45)
+    at file:///C:/electron-wpp-server/src/whatsapp/api/server.js:102:30
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\electron-wpp-server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\electron-wpp-server\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\electron-wpp-server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\index.js:280:10)
+    at jsonParser (C:\electron-wpp-server\node_modules\body-parser\lib\types\json.js:113:7)
+
+[2025-03-21T20:33:58.878Z] [2025-03-21T20:33:58.878Z] [UNKNOWN] Erro ao verificar status: Cannot read properties of null (reading 'isConnected')
+TypeError: Cannot read properties of null (reading 'isConnected')
+    at StatusServerWpp (file:///C:/electron-wpp-server/src/whatsapp/api/client.js:428:45)
+    at file:///C:/electron-wpp-server/src/whatsapp/api/server.js:102:30
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\electron-wpp-server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\electron-wpp-server\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\electron-wpp-server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\index.js:280:10)
+    at jsonParser (C:\electron-wpp-server\node_modules\body-parser\lib\types\json.js:113:7)
+
+[2025-03-21T20:34:13.901Z] [2025-03-21T20:34:13.900Z] [UNKNOWN] Erro ao verificar status: Cannot read properties of null (reading 'isConnected')
+TypeError: Cannot read properties of null (reading 'isConnected')
+    at StatusServerWpp (file:///C:/electron-wpp-server/src/whatsapp/api/client.js:428:45)
+    at file:///C:/electron-wpp-server/src/whatsapp/api/server.js:102:30
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\electron-wpp-server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\electron-wpp-server\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\electron-wpp-server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\index.js:280:10)
+    at jsonParser (C:\electron-wpp-server\node_modules\body-parser\lib\types\json.js:113:7)
+
+[2025-03-21T20:34:28.917Z] [2025-03-21T20:34:28.916Z] [UNKNOWN] Erro ao verificar status: Cannot read properties of null (reading 'isConnected')
+TypeError: Cannot read properties of null (reading 'isConnected')
+    at StatusServerWpp (file:///C:/electron-wpp-server/src/whatsapp/api/client.js:428:45)
+    at file:///C:/electron-wpp-server/src/whatsapp/api/server.js:102:30
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\electron-wpp-server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\electron-wpp-server\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\electron-wpp-server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\index.js:280:10)
+    at jsonParser (C:\electron-wpp-server\node_modules\body-parser\lib\types\json.js:113:7)
+
+[2025-03-21T20:34:43.935Z] [2025-03-21T20:34:43.934Z] [UNKNOWN] Erro ao verificar status: Cannot read properties of null (reading 'isConnected')
+TypeError: Cannot read properties of null (reading 'isConnected')
+    at StatusServerWpp (file:///C:/electron-wpp-server/src/whatsapp/api/client.js:428:45)
+    at file:///C:/electron-wpp-server/src/whatsapp/api/server.js:102:30
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\electron-wpp-server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\electron-wpp-server\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\electron-wpp-server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\index.js:280:10)
+    at jsonParser (C:\electron-wpp-server\node_modules\body-parser\lib\types\json.js:113:7)
+
+[2025-03-21T20:34:58.936Z] [2025-03-21T20:34:58.935Z] [UNKNOWN] Erro ao verificar status: Cannot read properties of null (reading 'isConnected')
+TypeError: Cannot read properties of null (reading 'isConnected')
+    at StatusServerWpp (file:///C:/electron-wpp-server/src/whatsapp/api/client.js:428:45)
+    at file:///C:/electron-wpp-server/src/whatsapp/api/server.js:102:30
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\electron-wpp-server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\electron-wpp-server\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\electron-wpp-server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\index.js:280:10)
+    at jsonParser (C:\electron-wpp-server\node_modules\body-parser\lib\types\json.js:113:7)
+
+[2025-03-21T20:35:13.937Z] [2025-03-21T20:35:13.937Z] [UNKNOWN] Erro ao verificar status: Cannot read properties of null (reading 'isConnected')
+TypeError: Cannot read properties of null (reading 'isConnected')
+    at StatusServerWpp (file:///C:/electron-wpp-server/src/whatsapp/api/client.js:428:45)
+    at file:///C:/electron-wpp-server/src/whatsapp/api/server.js:102:30
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\electron-wpp-server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\electron-wpp-server\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\electron-wpp-server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\index.js:280:10)
+    at jsonParser (C:\electron-wpp-server\node_modules\body-parser\lib\types\json.js:113:7)
+
+[2025-03-21T20:35:28.950Z] [2025-03-21T20:35:28.949Z] [UNKNOWN] Erro ao verificar status: Cannot read properties of null (reading 'isConnected')
+TypeError: Cannot read properties of null (reading 'isConnected')
+    at StatusServerWpp (file:///C:/electron-wpp-server/src/whatsapp/api/client.js:428:45)
+    at file:///C:/electron-wpp-server/src/whatsapp/api/server.js:102:30
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\electron-wpp-server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\electron-wpp-server\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\electron-wpp-server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\index.js:280:10)
+    at jsonParser (C:\electron-wpp-server\node_modules\body-parser\lib\types\json.js:113:7)
+
+[2025-03-21T20:35:43.943Z] [2025-03-21T20:35:43.943Z] [UNKNOWN] Erro ao verificar status: Cannot read properties of null (reading 'isConnected')
+TypeError: Cannot read properties of null (reading 'isConnected')
+    at StatusServerWpp (file:///C:/electron-wpp-server/src/whatsapp/api/client.js:428:45)
+    at file:///C:/electron-wpp-server/src/whatsapp/api/server.js:102:30
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\electron-wpp-server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\electron-wpp-server\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\electron-wpp-server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\index.js:280:10)
+    at jsonParser (C:\electron-wpp-server\node_modules\body-parser\lib\types\json.js:113:7)
+
+[2025-03-21T20:35:58.952Z] [2025-03-21T20:35:58.951Z] [UNKNOWN] Erro ao verificar status: Cannot read properties of null (reading 'isConnected')
+TypeError: Cannot read properties of null (reading 'isConnected')
+    at StatusServerWpp (file:///C:/electron-wpp-server/src/whatsapp/api/client.js:428:45)
+    at file:///C:/electron-wpp-server/src/whatsapp/api/server.js:102:30
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\electron-wpp-server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\electron-wpp-server\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\electron-wpp-server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\index.js:280:10)
+    at jsonParser (C:\electron-wpp-server\node_modules\body-parser\lib\types\json.js:113:7)
+
+[2025-03-21T20:36:13.960Z] [2025-03-21T20:36:13.960Z] [UNKNOWN] Erro ao verificar status: Cannot read properties of null (reading 'isConnected')
+TypeError: Cannot read properties of null (reading 'isConnected')
+    at StatusServerWpp (file:///C:/electron-wpp-server/src/whatsapp/api/client.js:428:45)
+    at file:///C:/electron-wpp-server/src/whatsapp/api/server.js:102:30
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\electron-wpp-server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\electron-wpp-server\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\electron-wpp-server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\index.js:280:10)
+    at jsonParser (C:\electron-wpp-server\node_modules\body-parser\lib\types\json.js:113:7)
+
+[2025-03-21T20:36:28.973Z] [2025-03-21T20:36:28.972Z] [UNKNOWN] Erro ao verificar status: Cannot read properties of null (reading 'isConnected')
+TypeError: Cannot read properties of null (reading 'isConnected')
+    at StatusServerWpp (file:///C:/electron-wpp-server/src/whatsapp/api/client.js:428:45)
+    at file:///C:/electron-wpp-server/src/whatsapp/api/server.js:102:30
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\electron-wpp-server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\electron-wpp-server\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\electron-wpp-server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\index.js:280:10)
+    at jsonParser (C:\electron-wpp-server\node_modules\body-parser\lib\types\json.js:113:7)
+
+[2025-03-21T20:36:43.989Z] [2025-03-21T20:36:43.988Z] [UNKNOWN] Erro ao verificar status: Cannot read properties of null (reading 'isConnected')
+TypeError: Cannot read properties of null (reading 'isConnected')
+    at StatusServerWpp (file:///C:/electron-wpp-server/src/whatsapp/api/client.js:428:45)
+    at file:///C:/electron-wpp-server/src/whatsapp/api/server.js:102:30
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\electron-wpp-server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\electron-wpp-server\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\electron-wpp-server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\index.js:280:10)
+    at jsonParser (C:\electron-wpp-server\node_modules\body-parser\lib\types\json.js:113:7)
+
+[2025-03-21T20:36:59.016Z] [2025-03-21T20:36:59.015Z] [UNKNOWN] Erro ao verificar status: Cannot read properties of null (reading 'isConnected')
+TypeError: Cannot read properties of null (reading 'isConnected')
+    at StatusServerWpp (file:///C:/electron-wpp-server/src/whatsapp/api/client.js:428:45)
+    at file:///C:/electron-wpp-server/src/whatsapp/api/server.js:102:30
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\electron-wpp-server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\electron-wpp-server\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\electron-wpp-server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\index.js:280:10)
+    at jsonParser (C:\electron-wpp-server\node_modules\body-parser\lib\types\json.js:113:7)
+
+[2025-03-21T20:37:14.019Z] [2025-03-21T20:37:14.018Z] [UNKNOWN] Erro ao verificar status: Cannot read properties of null (reading 'isConnected')
+TypeError: Cannot read properties of null (reading 'isConnected')
+    at StatusServerWpp (file:///C:/electron-wpp-server/src/whatsapp/api/client.js:428:45)
+    at file:///C:/electron-wpp-server/src/whatsapp/api/server.js:102:30
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\electron-wpp-server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\electron-wpp-server\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\electron-wpp-server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\index.js:280:10)
+    at jsonParser (C:\electron-wpp-server\node_modules\body-parser\lib\types\json.js:113:7)
+
+[2025-03-21T20:37:29.037Z] [2025-03-21T20:37:29.036Z] [UNKNOWN] Erro ao verificar status: Cannot read properties of null (reading 'isConnected')
+TypeError: Cannot read properties of null (reading 'isConnected')
+    at StatusServerWpp (file:///C:/electron-wpp-server/src/whatsapp/api/client.js:428:45)
+    at file:///C:/electron-wpp-server/src/whatsapp/api/server.js:102:30
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\electron-wpp-server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\electron-wpp-server\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\electron-wpp-server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\index.js:280:10)
+    at jsonParser (C:\electron-wpp-server\node_modules\body-parser\lib\types\json.js:113:7)
+
+[2025-03-21T20:37:44.062Z] [2025-03-21T20:37:44.062Z] [UNKNOWN] Erro ao verificar status: Cannot read properties of null (reading 'isConnected')
+TypeError: Cannot read properties of null (reading 'isConnected')
+    at StatusServerWpp (file:///C:/electron-wpp-server/src/whatsapp/api/client.js:428:45)
+    at file:///C:/electron-wpp-server/src/whatsapp/api/server.js:102:30
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\electron-wpp-server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\electron-wpp-server\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\electron-wpp-server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\index.js:280:10)
+    at jsonParser (C:\electron-wpp-server\node_modules\body-parser\lib\types\json.js:113:7)
+
+[2025-03-21T20:37:59.216Z] [2025-03-21T20:37:59.214Z] [UNKNOWN] Erro ao verificar status: Cannot read properties of null (reading 'isConnected')
+TypeError: Cannot read properties of null (reading 'isConnected')
+    at StatusServerWpp (file:///C:/electron-wpp-server/src/whatsapp/api/client.js:428:45)
+    at file:///C:/electron-wpp-server/src/whatsapp/api/server.js:102:30
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\electron-wpp-server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\electron-wpp-server\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\electron-wpp-server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\index.js:280:10)
+    at jsonParser (C:\electron-wpp-server\node_modules\body-parser\lib\types\json.js:113:7)
+
+[2025-03-21T20:42:14.223Z] [2025-03-21T20:42:14.222Z] [UNKNOWN] Erro ao verificar status: Cannot read properties of null (reading 'isConnected')
+TypeError: Cannot read properties of null (reading 'isConnected')
+    at StatusServerWpp (file:///C:/electron-wpp-server/src/whatsapp/api/client.js:428:45)
+    at file:///C:/electron-wpp-server/src/whatsapp/api/server.js:102:30
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\electron-wpp-server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\electron-wpp-server\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\electron-wpp-server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\index.js:280:10)
+    at jsonParser (C:\electron-wpp-server\node_modules\body-parser\lib\types\json.js:113:7)
+
+[2025-03-21T20:42:16.288Z] [2025-03-21T20:42:16.285Z] [QR_CODE] O QR Code foi gerado, mas o celular está desconectado. Conecte o WhatsApp no celular e tente novamente.
+
+[2025-03-21T20:42:20.849Z] [2025-03-21T20:42:20.849Z] [QR_CODE] Nenhuma sessão foi encontrada, por favor leia o QR-Code para conectar o Whatsapp.
+
+[2025-03-21T20:42:29.217Z] [2025-03-21T20:42:29.216Z] [UNKNOWN] Erro ao verificar status: Cannot read properties of null (reading 'isConnected')
+TypeError: Cannot read properties of null (reading 'isConnected')
+    at StatusServerWpp (file:///C:/electron-wpp-server/src/whatsapp/api/client.js:428:45)
+    at file:///C:/electron-wpp-server/src/whatsapp/api/server.js:102:30
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\electron-wpp-server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\electron-wpp-server\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\electron-wpp-server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\index.js:280:10)
+    at jsonParser (C:\electron-wpp-server\node_modules\body-parser\lib\types\json.js:113:7)
+
+[2025-03-21T20:42:44.215Z] [2025-03-21T20:42:44.214Z] [UNKNOWN] Erro ao verificar status: Cannot read properties of null (reading 'isConnected')
+TypeError: Cannot read properties of null (reading 'isConnected')
+    at StatusServerWpp (file:///C:/electron-wpp-server/src/whatsapp/api/client.js:428:45)
+    at file:///C:/electron-wpp-server/src/whatsapp/api/server.js:102:30
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\electron-wpp-server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\electron-wpp-server\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\electron-wpp-server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\index.js:280:10)
+    at jsonParser (C:\electron-wpp-server\node_modules\body-parser\lib\types\json.js:113:7)
+
+[2025-03-21T20:42:59.220Z] [2025-03-21T20:42:59.220Z] [UNKNOWN] Erro ao verificar status: Cannot read properties of null (reading 'isConnected')
+TypeError: Cannot read properties of null (reading 'isConnected')
+    at StatusServerWpp (file:///C:/electron-wpp-server/src/whatsapp/api/client.js:428:45)
+    at file:///C:/electron-wpp-server/src/whatsapp/api/server.js:102:30
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\electron-wpp-server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\electron-wpp-server\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\electron-wpp-server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\index.js:280:10)
+    at jsonParser (C:\electron-wpp-server\node_modules\body-parser\lib\types\json.js:113:7)
+
+[2025-03-21T20:43:14.229Z] [2025-03-21T20:43:14.228Z] [UNKNOWN] Erro ao verificar status: Cannot read properties of null (reading 'isConnected')
+TypeError: Cannot read properties of null (reading 'isConnected')
+    at StatusServerWpp (file:///C:/electron-wpp-server/src/whatsapp/api/client.js:428:45)
+    at file:///C:/electron-wpp-server/src/whatsapp/api/server.js:102:30
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\electron-wpp-server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\electron-wpp-server\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\electron-wpp-server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\index.js:280:10)
+    at jsonParser (C:\electron-wpp-server\node_modules\body-parser\lib\types\json.js:113:7)
+
+[2025-03-21T20:43:29.247Z] [2025-03-21T20:43:29.247Z] [UNKNOWN] Erro ao verificar status: Cannot read properties of null (reading 'isConnected')
+TypeError: Cannot read properties of null (reading 'isConnected')
+    at StatusServerWpp (file:///C:/electron-wpp-server/src/whatsapp/api/client.js:428:45)
+    at file:///C:/electron-wpp-server/src/whatsapp/api/server.js:102:30
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\electron-wpp-server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\electron-wpp-server\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\electron-wpp-server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\index.js:280:10)
+    at jsonParser (C:\electron-wpp-server\node_modules\body-parser\lib\types\json.js:113:7)
+
+[2025-03-21T20:43:44.238Z] [2025-03-21T20:43:44.237Z] [UNKNOWN] Erro ao verificar status: Cannot read properties of null (reading 'isConnected')
+TypeError: Cannot read properties of null (reading 'isConnected')
+    at StatusServerWpp (file:///C:/electron-wpp-server/src/whatsapp/api/client.js:428:45)
+    at file:///C:/electron-wpp-server/src/whatsapp/api/server.js:102:30
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\electron-wpp-server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\electron-wpp-server\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\electron-wpp-server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\index.js:280:10)
+    at jsonParser (C:\electron-wpp-server\node_modules\body-parser\lib\types\json.js:113:7)
+
+[2025-03-21T20:43:59.247Z] [2025-03-21T20:43:59.247Z] [UNKNOWN] Erro ao verificar status: Cannot read properties of null (reading 'isConnected')
+TypeError: Cannot read properties of null (reading 'isConnected')
+    at StatusServerWpp (file:///C:/electron-wpp-server/src/whatsapp/api/client.js:428:45)
+    at file:///C:/electron-wpp-server/src/whatsapp/api/server.js:102:30
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\electron-wpp-server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\electron-wpp-server\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\electron-wpp-server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\index.js:280:10)
+    at jsonParser (C:\electron-wpp-server\node_modules\body-parser\lib\types\json.js:113:7)
+
+[2025-03-21T20:44:14.263Z] [2025-03-21T20:44:14.262Z] [UNKNOWN] Erro ao verificar status: Cannot read properties of null (reading 'isConnected')
+TypeError: Cannot read properties of null (reading 'isConnected')
+    at StatusServerWpp (file:///C:/electron-wpp-server/src/whatsapp/api/client.js:428:45)
+    at file:///C:/electron-wpp-server/src/whatsapp/api/server.js:102:30
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\electron-wpp-server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\electron-wpp-server\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\electron-wpp-server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\index.js:280:10)
+    at jsonParser (C:\electron-wpp-server\node_modules\body-parser\lib\types\json.js:113:7)
+
+[2025-03-21T20:44:29.269Z] [2025-03-21T20:44:29.269Z] [UNKNOWN] Erro ao verificar status: Cannot read properties of null (reading 'isConnected')
+TypeError: Cannot read properties of null (reading 'isConnected')
+    at StatusServerWpp (file:///C:/electron-wpp-server/src/whatsapp/api/client.js:428:45)
+    at file:///C:/electron-wpp-server/src/whatsapp/api/server.js:102:30
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\electron-wpp-server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\electron-wpp-server\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\electron-wpp-server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\index.js:280:10)
+    at jsonParser (C:\electron-wpp-server\node_modules\body-parser\lib\types\json.js:113:7)
+
+[2025-03-21T20:44:44.267Z] [2025-03-21T20:44:44.267Z] [UNKNOWN] Erro ao verificar status: Cannot read properties of null (reading 'isConnected')
+TypeError: Cannot read properties of null (reading 'isConnected')
+    at StatusServerWpp (file:///C:/electron-wpp-server/src/whatsapp/api/client.js:428:45)
+    at file:///C:/electron-wpp-server/src/whatsapp/api/server.js:102:30
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\electron-wpp-server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\electron-wpp-server\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\electron-wpp-server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\index.js:280:10)
+    at jsonParser (C:\electron-wpp-server\node_modules\body-parser\lib\types\json.js:113:7)
+
+[2025-03-21T20:44:59.296Z] [2025-03-21T20:44:59.296Z] [UNKNOWN] Erro ao verificar status: Cannot read properties of null (reading 'isConnected')
+TypeError: Cannot read properties of null (reading 'isConnected')
+    at StatusServerWpp (file:///C:/electron-wpp-server/src/whatsapp/api/client.js:428:45)
+    at file:///C:/electron-wpp-server/src/whatsapp/api/server.js:102:30
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\electron-wpp-server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\electron-wpp-server\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\electron-wpp-server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\index.js:280:10)
+    at jsonParser (C:\electron-wpp-server\node_modules\body-parser\lib\types\json.js:113:7)
+
+[2025-03-21T20:45:14.301Z] [2025-03-21T20:45:14.301Z] [UNKNOWN] Erro ao verificar status: Cannot read properties of null (reading 'isConnected')
+TypeError: Cannot read properties of null (reading 'isConnected')
+    at StatusServerWpp (file:///C:/electron-wpp-server/src/whatsapp/api/client.js:428:45)
+    at file:///C:/electron-wpp-server/src/whatsapp/api/server.js:102:30
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\electron-wpp-server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\electron-wpp-server\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\electron-wpp-server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\index.js:280:10)
+    at jsonParser (C:\electron-wpp-server\node_modules\body-parser\lib\types\json.js:113:7)
+
+[2025-03-21T20:45:29.309Z] [2025-03-21T20:45:29.308Z] [UNKNOWN] Erro ao verificar status: Cannot read properties of null (reading 'isConnected')
+TypeError: Cannot read properties of null (reading 'isConnected')
+    at StatusServerWpp (file:///C:/electron-wpp-server/src/whatsapp/api/client.js:428:45)
+    at file:///C:/electron-wpp-server/src/whatsapp/api/server.js:102:30
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\electron-wpp-server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\electron-wpp-server\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\electron-wpp-server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\index.js:280:10)
+    at jsonParser (C:\electron-wpp-server\node_modules\body-parser\lib\types\json.js:113:7)
+
+[2025-03-21T20:45:44.302Z] [2025-03-21T20:45:44.302Z] [UNKNOWN] Erro ao verificar status: Cannot read properties of null (reading 'isConnected')
+TypeError: Cannot read properties of null (reading 'isConnected')
+    at StatusServerWpp (file:///C:/electron-wpp-server/src/whatsapp/api/client.js:428:45)
+    at file:///C:/electron-wpp-server/src/whatsapp/api/server.js:102:30
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\electron-wpp-server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\electron-wpp-server\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\electron-wpp-server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\index.js:280:10)
+    at jsonParser (C:\electron-wpp-server\node_modules\body-parser\lib\types\json.js:113:7)
+
+[2025-03-21T20:45:59.309Z] [2025-03-21T20:45:59.308Z] [UNKNOWN] Erro ao verificar status: Cannot read properties of null (reading 'isConnected')
+TypeError: Cannot read properties of null (reading 'isConnected')
+    at StatusServerWpp (file:///C:/electron-wpp-server/src/whatsapp/api/client.js:428:45)
+    at file:///C:/electron-wpp-server/src/whatsapp/api/server.js:102:30
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\electron-wpp-server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\electron-wpp-server\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\electron-wpp-server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\index.js:280:10)
+    at jsonParser (C:\electron-wpp-server\node_modules\body-parser\lib\types\json.js:113:7)
+
+[2025-03-21T20:46:14.306Z] [2025-03-21T20:46:14.305Z] [UNKNOWN] Erro ao verificar status: Cannot read properties of null (reading 'isConnected')
+TypeError: Cannot read properties of null (reading 'isConnected')
+    at StatusServerWpp (file:///C:/electron-wpp-server/src/whatsapp/api/client.js:428:45)
+    at file:///C:/electron-wpp-server/src/whatsapp/api/server.js:102:30
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\electron-wpp-server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\electron-wpp-server\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\electron-wpp-server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\index.js:280:10)
+    at jsonParser (C:\electron-wpp-server\node_modules\body-parser\lib\types\json.js:113:7)
+
+[2025-03-21T20:46:29.329Z] [2025-03-21T20:46:29.328Z] [UNKNOWN] Erro ao verificar status: Cannot read properties of null (reading 'isConnected')
+TypeError: Cannot read properties of null (reading 'isConnected')
+    at StatusServerWpp (file:///C:/electron-wpp-server/src/whatsapp/api/client.js:428:45)
+    at file:///C:/electron-wpp-server/src/whatsapp/api/server.js:102:30
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\electron-wpp-server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\electron-wpp-server\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\electron-wpp-server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\index.js:280:10)
+    at jsonParser (C:\electron-wpp-server\node_modules\body-parser\lib\types\json.js:113:7)
+
+[2025-03-21T20:46:44.330Z] [2025-03-21T20:46:44.329Z] [UNKNOWN] Erro ao verificar status: Cannot read properties of null (reading 'isConnected')
+TypeError: Cannot read properties of null (reading 'isConnected')
+    at StatusServerWpp (file:///C:/electron-wpp-server/src/whatsapp/api/client.js:428:45)
+    at file:///C:/electron-wpp-server/src/whatsapp/api/server.js:102:30
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\electron-wpp-server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\electron-wpp-server\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\electron-wpp-server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\index.js:280:10)
+    at jsonParser (C:\electron-wpp-server\node_modules\body-parser\lib\types\json.js:113:7)
+
+[2025-03-21T20:46:59.342Z] [2025-03-21T20:46:59.342Z] [UNKNOWN] Erro ao verificar status: Cannot read properties of null (reading 'isConnected')
+TypeError: Cannot read properties of null (reading 'isConnected')
+    at StatusServerWpp (file:///C:/electron-wpp-server/src/whatsapp/api/client.js:428:45)
+    at file:///C:/electron-wpp-server/src/whatsapp/api/server.js:102:30
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\electron-wpp-server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\electron-wpp-server\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\electron-wpp-server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\index.js:280:10)
+    at jsonParser (C:\electron-wpp-server\node_modules\body-parser\lib\types\json.js:113:7)
+
+[2025-03-21T20:47:14.350Z] [2025-03-21T20:47:14.350Z] [UNKNOWN] Erro ao verificar status: Cannot read properties of null (reading 'isConnected')
+TypeError: Cannot read properties of null (reading 'isConnected')
+    at StatusServerWpp (file:///C:/electron-wpp-server/src/whatsapp/api/client.js:428:45)
+    at file:///C:/electron-wpp-server/src/whatsapp/api/server.js:102:30
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\electron-wpp-server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\electron-wpp-server\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\electron-wpp-server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\index.js:280:10)
+    at jsonParser (C:\electron-wpp-server\node_modules\body-parser\lib\types\json.js:113:7)
+
+[2025-03-21T20:47:29.359Z] [2025-03-21T20:47:29.359Z] [UNKNOWN] Erro ao verificar status: Cannot read properties of null (reading 'isConnected')
+TypeError: Cannot read properties of null (reading 'isConnected')
+    at StatusServerWpp (file:///C:/electron-wpp-server/src/whatsapp/api/client.js:428:45)
+    at file:///C:/electron-wpp-server/src/whatsapp/api/server.js:102:30
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\electron-wpp-server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\electron-wpp-server\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\electron-wpp-server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\index.js:280:10)
+    at jsonParser (C:\electron-wpp-server\node_modules\body-parser\lib\types\json.js:113:7)
+
+[2025-03-21T20:47:44.353Z] [2025-03-21T20:47:44.352Z] [UNKNOWN] Erro ao verificar status: Cannot read properties of null (reading 'isConnected')
+TypeError: Cannot read properties of null (reading 'isConnected')
+    at StatusServerWpp (file:///C:/electron-wpp-server/src/whatsapp/api/client.js:428:45)
+    at file:///C:/electron-wpp-server/src/whatsapp/api/server.js:102:30
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\electron-wpp-server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\electron-wpp-server\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\electron-wpp-server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\index.js:280:10)
+    at jsonParser (C:\electron-wpp-server\node_modules\body-parser\lib\types\json.js:113:7)
+
+[2025-03-21T20:47:59.545Z] [2025-03-21T20:47:59.544Z] [UNKNOWN] Erro ao verificar status: Cannot read properties of null (reading 'isConnected')
+TypeError: Cannot read properties of null (reading 'isConnected')
+    at StatusServerWpp (file:///C:/electron-wpp-server/src/whatsapp/api/client.js:428:45)
+    at file:///C:/electron-wpp-server/src/whatsapp/api/server.js:102:30
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\electron-wpp-server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\electron-wpp-server\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\electron-wpp-server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\index.js:280:10)
+    at jsonParser (C:\electron-wpp-server\node_modules\body-parser\lib\types\json.js:113:7)
+
+[2025-03-21T20:48:14.363Z] [2025-03-21T20:48:14.363Z] [UNKNOWN] Erro ao verificar status: Cannot read properties of null (reading 'isConnected')
+TypeError: Cannot read properties of null (reading 'isConnected')
+    at StatusServerWpp (file:///C:/electron-wpp-server/src/whatsapp/api/client.js:428:45)
+    at file:///C:/electron-wpp-server/src/whatsapp/api/server.js:102:30
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\electron-wpp-server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\electron-wpp-server\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\electron-wpp-server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\index.js:280:10)
+    at jsonParser (C:\electron-wpp-server\node_modules\body-parser\lib\types\json.js:113:7)
+
+[2025-03-21T20:48:29.353Z] [2025-03-21T20:48:29.353Z] [UNKNOWN] Erro ao verificar status: Cannot read properties of null (reading 'isConnected')
+TypeError: Cannot read properties of null (reading 'isConnected')
+    at StatusServerWpp (file:///C:/electron-wpp-server/src/whatsapp/api/client.js:428:45)
+    at file:///C:/electron-wpp-server/src/whatsapp/api/server.js:102:30
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\electron-wpp-server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\electron-wpp-server\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\electron-wpp-server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\index.js:280:10)
+    at jsonParser (C:\electron-wpp-server\node_modules\body-parser\lib\types\json.js:113:7)
+
+[2025-03-21T20:48:44.376Z] [2025-03-21T20:48:44.376Z] [UNKNOWN] Erro ao verificar status: Cannot read properties of null (reading 'isConnected')
+TypeError: Cannot read properties of null (reading 'isConnected')
+    at StatusServerWpp (file:///C:/electron-wpp-server/src/whatsapp/api/client.js:428:45)
+    at file:///C:/electron-wpp-server/src/whatsapp/api/server.js:102:30
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\electron-wpp-server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\electron-wpp-server\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\electron-wpp-server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\index.js:280:10)
+    at jsonParser (C:\electron-wpp-server\node_modules\body-parser\lib\types\json.js:113:7)
+
+[2025-03-21T20:48:59.381Z] [2025-03-21T20:48:59.380Z] [UNKNOWN] Erro ao verificar status: Cannot read properties of null (reading 'isConnected')
+TypeError: Cannot read properties of null (reading 'isConnected')
+    at StatusServerWpp (file:///C:/electron-wpp-server/src/whatsapp/api/client.js:428:45)
+    at file:///C:/electron-wpp-server/src/whatsapp/api/server.js:102:30
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\electron-wpp-server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\electron-wpp-server\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\electron-wpp-server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\index.js:280:10)
+    at jsonParser (C:\electron-wpp-server\node_modules\body-parser\lib\types\json.js:113:7)
+
+[2025-03-21T20:49:14.404Z] [2025-03-21T20:49:14.403Z] [UNKNOWN] Erro ao verificar status: Cannot read properties of null (reading 'isConnected')
+TypeError: Cannot read properties of null (reading 'isConnected')
+    at StatusServerWpp (file:///C:/electron-wpp-server/src/whatsapp/api/client.js:428:45)
+    at file:///C:/electron-wpp-server/src/whatsapp/api/server.js:102:30
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\electron-wpp-server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\electron-wpp-server\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\electron-wpp-server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\index.js:280:10)
+    at jsonParser (C:\electron-wpp-server\node_modules\body-parser\lib\types\json.js:113:7)
+
+[2025-03-21T20:49:29.405Z] [2025-03-21T20:49:29.405Z] [UNKNOWN] Erro ao verificar status: Cannot read properties of null (reading 'isConnected')
+TypeError: Cannot read properties of null (reading 'isConnected')
+    at StatusServerWpp (file:///C:/electron-wpp-server/src/whatsapp/api/client.js:428:45)
+    at file:///C:/electron-wpp-server/src/whatsapp/api/server.js:102:30
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\electron-wpp-server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\electron-wpp-server\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\electron-wpp-server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\index.js:280:10)
+    at jsonParser (C:\electron-wpp-server\node_modules\body-parser\lib\types\json.js:113:7)
+
+[2025-03-21T20:49:44.393Z] [2025-03-21T20:49:44.393Z] [UNKNOWN] Erro ao verificar status: Cannot read properties of null (reading 'isConnected')
+TypeError: Cannot read properties of null (reading 'isConnected')
+    at StatusServerWpp (file:///C:/electron-wpp-server/src/whatsapp/api/client.js:428:45)
+    at file:///C:/electron-wpp-server/src/whatsapp/api/server.js:102:30
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\electron-wpp-server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\electron-wpp-server\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\electron-wpp-server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\index.js:280:10)
+    at jsonParser (C:\electron-wpp-server\node_modules\body-parser\lib\types\json.js:113:7)
+
+[2025-03-21T20:49:59.411Z] [2025-03-21T20:49:59.411Z] [UNKNOWN] Erro ao verificar status: Cannot read properties of null (reading 'isConnected')
+TypeError: Cannot read properties of null (reading 'isConnected')
+    at StatusServerWpp (file:///C:/electron-wpp-server/src/whatsapp/api/client.js:428:45)
+    at file:///C:/electron-wpp-server/src/whatsapp/api/server.js:102:30
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\electron-wpp-server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\electron-wpp-server\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\electron-wpp-server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\index.js:280:10)
+    at jsonParser (C:\electron-wpp-server\node_modules\body-parser\lib\types\json.js:113:7)
+
+[2025-03-21T20:50:14.417Z] [2025-03-21T20:50:14.417Z] [UNKNOWN] Erro ao verificar status: Cannot read properties of null (reading 'isConnected')
+TypeError: Cannot read properties of null (reading 'isConnected')
+    at StatusServerWpp (file:///C:/electron-wpp-server/src/whatsapp/api/client.js:428:45)
+    at file:///C:/electron-wpp-server/src/whatsapp/api/server.js:102:30
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\electron-wpp-server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\electron-wpp-server\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\electron-wpp-server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\index.js:280:10)
+    at jsonParser (C:\electron-wpp-server\node_modules\body-parser\lib\types\json.js:113:7)
+
+[2025-03-21T20:50:29.424Z] [2025-03-21T20:50:29.423Z] [UNKNOWN] Erro ao verificar status: Cannot read properties of null (reading 'isConnected')
+TypeError: Cannot read properties of null (reading 'isConnected')
+    at StatusServerWpp (file:///C:/electron-wpp-server/src/whatsapp/api/client.js:428:45)
+    at file:///C:/electron-wpp-server/src/whatsapp/api/server.js:102:30
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\electron-wpp-server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\electron-wpp-server\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\electron-wpp-server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\index.js:280:10)
+    at jsonParser (C:\electron-wpp-server\node_modules\body-parser\lib\types\json.js:113:7)
+
+[2025-03-21T20:50:44.432Z] [2025-03-21T20:50:44.432Z] [UNKNOWN] Erro ao verificar status: Cannot read properties of null (reading 'isConnected')
+TypeError: Cannot read properties of null (reading 'isConnected')
+    at StatusServerWpp (file:///C:/electron-wpp-server/src/whatsapp/api/client.js:428:45)
+    at file:///C:/electron-wpp-server/src/whatsapp/api/server.js:102:30
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\electron-wpp-server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\electron-wpp-server\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\electron-wpp-server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\index.js:280:10)
+    at jsonParser (C:\electron-wpp-server\node_modules\body-parser\lib\types\json.js:113:7)
+
+[2025-03-21T20:50:59.442Z] [2025-03-21T20:50:59.441Z] [UNKNOWN] Erro ao verificar status: Cannot read properties of null (reading 'isConnected')
+TypeError: Cannot read properties of null (reading 'isConnected')
+    at StatusServerWpp (file:///C:/electron-wpp-server/src/whatsapp/api/client.js:428:45)
+    at file:///C:/electron-wpp-server/src/whatsapp/api/server.js:102:30
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\electron-wpp-server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\electron-wpp-server\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\electron-wpp-server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\index.js:280:10)
+    at jsonParser (C:\electron-wpp-server\node_modules\body-parser\lib\types\json.js:113:7)
+
+[2025-03-21T20:51:14.441Z] [2025-03-21T20:51:14.441Z] [UNKNOWN] Erro ao verificar status: Cannot read properties of null (reading 'isConnected')
+TypeError: Cannot read properties of null (reading 'isConnected')
+    at StatusServerWpp (file:///C:/electron-wpp-server/src/whatsapp/api/client.js:428:45)
+    at file:///C:/electron-wpp-server/src/whatsapp/api/server.js:102:30
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\electron-wpp-server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\electron-wpp-server\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\electron-wpp-server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\index.js:280:10)
+    at jsonParser (C:\electron-wpp-server\node_modules\body-parser\lib\types\json.js:113:7)
+
+[2025-03-21T20:51:29.460Z] [2025-03-21T20:51:29.460Z] [UNKNOWN] Erro ao verificar status: Cannot read properties of null (reading 'isConnected')
+TypeError: Cannot read properties of null (reading 'isConnected')
+    at StatusServerWpp (file:///C:/electron-wpp-server/src/whatsapp/api/client.js:428:45)
+    at file:///C:/electron-wpp-server/src/whatsapp/api/server.js:102:30
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\electron-wpp-server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\electron-wpp-server\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\electron-wpp-server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\index.js:280:10)
+    at jsonParser (C:\electron-wpp-server\node_modules\body-parser\lib\types\json.js:113:7)
+
+[2025-03-21T20:51:44.457Z] [2025-03-21T20:51:44.456Z] [UNKNOWN] Erro ao verificar status: Cannot read properties of null (reading 'isConnected')
+TypeError: Cannot read properties of null (reading 'isConnected')
+    at StatusServerWpp (file:///C:/electron-wpp-server/src/whatsapp/api/client.js:428:45)
+    at file:///C:/electron-wpp-server/src/whatsapp/api/server.js:102:30
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\electron-wpp-server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\electron-wpp-server\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\electron-wpp-server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\index.js:280:10)
+    at jsonParser (C:\electron-wpp-server\node_modules\body-parser\lib\types\json.js:113:7)
+
+[2025-03-21T20:51:59.457Z] [2025-03-21T20:51:59.456Z] [UNKNOWN] Erro ao verificar status: Cannot read properties of null (reading 'isConnected')
+TypeError: Cannot read properties of null (reading 'isConnected')
+    at StatusServerWpp (file:///C:/electron-wpp-server/src/whatsapp/api/client.js:428:45)
+    at file:///C:/electron-wpp-server/src/whatsapp/api/server.js:102:30
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\electron-wpp-server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\electron-wpp-server\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\electron-wpp-server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\index.js:280:10)
+    at jsonParser (C:\electron-wpp-server\node_modules\body-parser\lib\types\json.js:113:7)
+
+[2025-03-21T20:52:14.475Z] [2025-03-21T20:52:14.474Z] [UNKNOWN] Erro ao verificar status: Cannot read properties of null (reading 'isConnected')
+TypeError: Cannot read properties of null (reading 'isConnected')
+    at StatusServerWpp (file:///C:/electron-wpp-server/src/whatsapp/api/client.js:428:45)
+    at file:///C:/electron-wpp-server/src/whatsapp/api/server.js:102:30
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\electron-wpp-server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\electron-wpp-server\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\electron-wpp-server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\index.js:280:10)
+    at jsonParser (C:\electron-wpp-server\node_modules\body-parser\lib\types\json.js:113:7)
+
+[2025-03-21T20:52:29.485Z] [2025-03-21T20:52:29.484Z] [UNKNOWN] Erro ao verificar status: Cannot read properties of null (reading 'isConnected')
+TypeError: Cannot read properties of null (reading 'isConnected')
+    at StatusServerWpp (file:///C:/electron-wpp-server/src/whatsapp/api/client.js:428:45)
+    at file:///C:/electron-wpp-server/src/whatsapp/api/server.js:102:30
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\electron-wpp-server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\electron-wpp-server\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\electron-wpp-server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\index.js:280:10)
+    at jsonParser (C:\electron-wpp-server\node_modules\body-parser\lib\types\json.js:113:7)
+
+[2025-03-21T20:52:44.508Z] [2025-03-21T20:52:44.508Z] [UNKNOWN] Erro ao verificar status: Cannot read properties of null (reading 'isConnected')
+TypeError: Cannot read properties of null (reading 'isConnected')
+    at StatusServerWpp (file:///C:/electron-wpp-server/src/whatsapp/api/client.js:428:45)
+    at file:///C:/electron-wpp-server/src/whatsapp/api/server.js:102:30
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\electron-wpp-server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\electron-wpp-server\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\electron-wpp-server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\index.js:280:10)
+    at jsonParser (C:\electron-wpp-server\node_modules\body-parser\lib\types\json.js:113:7)
+
+[2025-03-21T20:52:59.500Z] [2025-03-21T20:52:59.500Z] [UNKNOWN] Erro ao verificar status: Cannot read properties of null (reading 'isConnected')
+TypeError: Cannot read properties of null (reading 'isConnected')
+    at StatusServerWpp (file:///C:/electron-wpp-server/src/whatsapp/api/client.js:428:45)
+    at file:///C:/electron-wpp-server/src/whatsapp/api/server.js:102:30
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\electron-wpp-server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\electron-wpp-server\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\electron-wpp-server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\index.js:280:10)
+    at jsonParser (C:\electron-wpp-server\node_modules\body-parser\lib\types\json.js:113:7)
+
+[2025-03-21T20:53:14.501Z] [2025-03-21T20:53:14.501Z] [UNKNOWN] Erro ao verificar status: Cannot read properties of null (reading 'isConnected')
+TypeError: Cannot read properties of null (reading 'isConnected')
+    at StatusServerWpp (file:///C:/electron-wpp-server/src/whatsapp/api/client.js:428:45)
+    at file:///C:/electron-wpp-server/src/whatsapp/api/server.js:102:30
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\electron-wpp-server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\electron-wpp-server\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\electron-wpp-server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\index.js:280:10)
+    at jsonParser (C:\electron-wpp-server\node_modules\body-parser\lib\types\json.js:113:7)
+
+[2025-03-21T20:53:29.515Z] [2025-03-21T20:53:29.514Z] [UNKNOWN] Erro ao verificar status: Cannot read properties of null (reading 'isConnected')
+TypeError: Cannot read properties of null (reading 'isConnected')
+    at StatusServerWpp (file:///C:/electron-wpp-server/src/whatsapp/api/client.js:428:45)
+    at file:///C:/electron-wpp-server/src/whatsapp/api/server.js:102:30
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\electron-wpp-server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\electron-wpp-server\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\electron-wpp-server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\index.js:280:10)
+    at jsonParser (C:\electron-wpp-server\node_modules\body-parser\lib\types\json.js:113:7)
+
+[2025-03-21T20:53:44.529Z] [2025-03-21T20:53:44.529Z] [UNKNOWN] Erro ao verificar status: Cannot read properties of null (reading 'isConnected')
+TypeError: Cannot read properties of null (reading 'isConnected')
+    at StatusServerWpp (file:///C:/electron-wpp-server/src/whatsapp/api/client.js:428:45)
+    at file:///C:/electron-wpp-server/src/whatsapp/api/server.js:102:30
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\electron-wpp-server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\electron-wpp-server\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\electron-wpp-server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\index.js:280:10)
+    at jsonParser (C:\electron-wpp-server\node_modules\body-parser\lib\types\json.js:113:7)
+
+[2025-03-21T20:53:59.540Z] [2025-03-21T20:53:59.539Z] [UNKNOWN] Erro ao verificar status: Cannot read properties of null (reading 'isConnected')
+TypeError: Cannot read properties of null (reading 'isConnected')
+    at StatusServerWpp (file:///C:/electron-wpp-server/src/whatsapp/api/client.js:428:45)
+    at file:///C:/electron-wpp-server/src/whatsapp/api/server.js:102:30
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\electron-wpp-server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\electron-wpp-server\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\electron-wpp-server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\index.js:280:10)
+    at jsonParser (C:\electron-wpp-server\node_modules\body-parser\lib\types\json.js:113:7)
+
+[2025-03-21T20:54:14.542Z] [2025-03-21T20:54:14.541Z] [UNKNOWN] Erro ao verificar status: Cannot read properties of null (reading 'isConnected')
+TypeError: Cannot read properties of null (reading 'isConnected')
+    at StatusServerWpp (file:///C:/electron-wpp-server/src/whatsapp/api/client.js:428:45)
+    at file:///C:/electron-wpp-server/src/whatsapp/api/server.js:102:30
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\electron-wpp-server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\electron-wpp-server\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\electron-wpp-server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\index.js:280:10)
+    at jsonParser (C:\electron-wpp-server\node_modules\body-parser\lib\types\json.js:113:7)
+
+[2025-03-21T20:54:29.551Z] [2025-03-21T20:54:29.551Z] [UNKNOWN] Erro ao verificar status: Cannot read properties of null (reading 'isConnected')
+TypeError: Cannot read properties of null (reading 'isConnected')
+    at StatusServerWpp (file:///C:/electron-wpp-server/src/whatsapp/api/client.js:428:45)
+    at file:///C:/electron-wpp-server/src/whatsapp/api/server.js:102:30
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\electron-wpp-server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\electron-wpp-server\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\electron-wpp-server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\index.js:280:10)
+    at jsonParser (C:\electron-wpp-server\node_modules\body-parser\lib\types\json.js:113:7)
+
+[2025-03-21T20:54:44.566Z] [2025-03-21T20:54:44.566Z] [UNKNOWN] Erro ao verificar status: Cannot read properties of null (reading 'isConnected')
+TypeError: Cannot read properties of null (reading 'isConnected')
+    at StatusServerWpp (file:///C:/electron-wpp-server/src/whatsapp/api/client.js:428:45)
+    at file:///C:/electron-wpp-server/src/whatsapp/api/server.js:102:30
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\electron-wpp-server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\electron-wpp-server\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\electron-wpp-server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\index.js:280:10)
+    at jsonParser (C:\electron-wpp-server\node_modules\body-parser\lib\types\json.js:113:7)
+
+[2025-03-21T20:54:59.571Z] [2025-03-21T20:54:59.570Z] [UNKNOWN] Erro ao verificar status: Cannot read properties of null (reading 'isConnected')
+TypeError: Cannot read properties of null (reading 'isConnected')
+    at StatusServerWpp (file:///C:/electron-wpp-server/src/whatsapp/api/client.js:428:45)
+    at file:///C:/electron-wpp-server/src/whatsapp/api/server.js:102:30
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\electron-wpp-server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\electron-wpp-server\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\electron-wpp-server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\index.js:280:10)
+    at jsonParser (C:\electron-wpp-server\node_modules\body-parser\lib\types\json.js:113:7)
+
+[2025-03-21T20:55:14.589Z] [2025-03-21T20:55:14.589Z] [UNKNOWN] Erro ao verificar status: Cannot read properties of null (reading 'isConnected')
+TypeError: Cannot read properties of null (reading 'isConnected')
+    at StatusServerWpp (file:///C:/electron-wpp-server/src/whatsapp/api/client.js:428:45)
+    at file:///C:/electron-wpp-server/src/whatsapp/api/server.js:102:30
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\electron-wpp-server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\electron-wpp-server\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\electron-wpp-server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\index.js:280:10)
+    at jsonParser (C:\electron-wpp-server\node_modules\body-parser\lib\types\json.js:113:7)
+
+[2025-03-21T20:55:29.571Z] [2025-03-21T20:55:29.570Z] [UNKNOWN] Erro ao verificar status: Cannot read properties of null (reading 'isConnected')
+TypeError: Cannot read properties of null (reading 'isConnected')
+    at StatusServerWpp (file:///C:/electron-wpp-server/src/whatsapp/api/client.js:428:45)
+    at file:///C:/electron-wpp-server/src/whatsapp/api/server.js:102:30
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\electron-wpp-server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\electron-wpp-server\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\electron-wpp-server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\index.js:280:10)
+    at jsonParser (C:\electron-wpp-server\node_modules\body-parser\lib\types\json.js:113:7)
+
+[2025-03-21T20:55:44.574Z] [2025-03-21T20:55:44.573Z] [UNKNOWN] Erro ao verificar status: Cannot read properties of null (reading 'isConnected')
+TypeError: Cannot read properties of null (reading 'isConnected')
+    at StatusServerWpp (file:///C:/electron-wpp-server/src/whatsapp/api/client.js:428:45)
+    at file:///C:/electron-wpp-server/src/whatsapp/api/server.js:102:30
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\electron-wpp-server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\electron-wpp-server\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\electron-wpp-server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\index.js:280:10)
+    at jsonParser (C:\electron-wpp-server\node_modules\body-parser\lib\types\json.js:113:7)
+
+[2025-03-21T20:55:59.583Z] [2025-03-21T20:55:59.583Z] [UNKNOWN] Erro ao verificar status: Cannot read properties of null (reading 'isConnected')
+TypeError: Cannot read properties of null (reading 'isConnected')
+    at StatusServerWpp (file:///C:/electron-wpp-server/src/whatsapp/api/client.js:428:45)
+    at file:///C:/electron-wpp-server/src/whatsapp/api/server.js:102:30
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\electron-wpp-server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\electron-wpp-server\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\electron-wpp-server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\index.js:280:10)
+    at jsonParser (C:\electron-wpp-server\node_modules\body-parser\lib\types\json.js:113:7)
+
+[2025-03-21T20:58:29.713Z] [2025-03-21T20:58:29.712Z] [UNKNOWN] Erro ao verificar status: Cannot read properties of null (reading 'isConnected')
+TypeError: Cannot read properties of null (reading 'isConnected')
+    at StatusServerWpp (file:///C:/electron-wpp-server/src/whatsapp/api/client.js:428:45)
+    at file:///C:/electron-wpp-server/src/whatsapp/api/server.js:102:30
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\electron-wpp-server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\electron-wpp-server\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\electron-wpp-server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\index.js:280:10)
+    at jsonParser (C:\electron-wpp-server\node_modules\body-parser\lib\types\json.js:113:7)
+
+[2025-03-21T20:58:34.574Z] [2025-03-21T20:58:34.574Z] [QR_CODE] O QR Code foi gerado, mas o celular está desconectado. Conecte o WhatsApp no celular e tente novamente.
+
+[2025-03-21T20:58:36.239Z] [2025-03-21T20:58:36.239Z] [QR_CODE] Nenhuma sessão foi encontrada, por favor leia o QR-Code para conectar o Whatsapp.
+
+[2025-03-21T20:58:44.674Z] [2025-03-21T20:58:44.674Z] [UNKNOWN] Erro ao verificar status: Cannot read properties of null (reading 'isConnected')
+TypeError: Cannot read properties of null (reading 'isConnected')
+    at StatusServerWpp (file:///C:/electron-wpp-server/src/whatsapp/api/client.js:428:45)
+    at file:///C:/electron-wpp-server/src/whatsapp/api/server.js:102:30
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\electron-wpp-server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\electron-wpp-server\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\electron-wpp-server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\index.js:280:10)
+    at jsonParser (C:\electron-wpp-server\node_modules\body-parser\lib\types\json.js:113:7)
+
+[2025-03-21T20:58:59.683Z] [2025-03-21T20:58:59.682Z] [UNKNOWN] Erro ao verificar status: Cannot read properties of null (reading 'isConnected')
+TypeError: Cannot read properties of null (reading 'isConnected')
+    at StatusServerWpp (file:///C:/electron-wpp-server/src/whatsapp/api/client.js:428:45)
+    at file:///C:/electron-wpp-server/src/whatsapp/api/server.js:102:30
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\electron-wpp-server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\electron-wpp-server\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\electron-wpp-server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\index.js:280:10)
+    at jsonParser (C:\electron-wpp-server\node_modules\body-parser\lib\types\json.js:113:7)
+
+[2025-03-21T20:59:14.673Z] [2025-03-21T20:59:14.672Z] [UNKNOWN] Erro ao verificar status: Cannot read properties of null (reading 'isConnected')
+TypeError: Cannot read properties of null (reading 'isConnected')
+    at StatusServerWpp (file:///C:/electron-wpp-server/src/whatsapp/api/client.js:428:45)
+    at file:///C:/electron-wpp-server/src/whatsapp/api/server.js:102:30
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\electron-wpp-server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\electron-wpp-server\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\electron-wpp-server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\index.js:280:10)
+    at jsonParser (C:\electron-wpp-server\node_modules\body-parser\lib\types\json.js:113:7)
+
+[2025-03-21T20:59:29.778Z] [2025-03-21T20:59:29.777Z] [UNKNOWN] Erro ao verificar status: Cannot read properties of null (reading 'isConnected')
+TypeError: Cannot read properties of null (reading 'isConnected')
+    at StatusServerWpp (file:///C:/electron-wpp-server/src/whatsapp/api/client.js:428:45)
+    at file:///C:/electron-wpp-server/src/whatsapp/api/server.js:102:30
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\electron-wpp-server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\electron-wpp-server\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\electron-wpp-server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\index.js:280:10)
+    at jsonParser (C:\electron-wpp-server\node_modules\body-parser\lib\types\json.js:113:7)
+
+[2025-03-21T20:59:44.848Z] [2025-03-21T20:59:44.847Z] [UNKNOWN] Erro ao verificar status: Cannot read properties of null (reading 'isConnected')
+TypeError: Cannot read properties of null (reading 'isConnected')
+    at StatusServerWpp (file:///C:/electron-wpp-server/src/whatsapp/api/client.js:428:45)
+    at file:///C:/electron-wpp-server/src/whatsapp/api/server.js:102:30
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\electron-wpp-server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\electron-wpp-server\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\electron-wpp-server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\index.js:280:10)
+    at jsonParser (C:\electron-wpp-server\node_modules\body-parser\lib\types\json.js:113:7)
+
+[2025-03-21T20:59:48.001Z] [2025-03-21T20:59:48.000Z] [QR_CODE] O QR Code foi gerado, mas o celular está desconectado. Conecte o WhatsApp no celular e tente novamente.
+
+[2025-03-21T20:59:51.529Z] [2025-03-21T20:59:51.529Z] [QR_CODE] Nenhuma sessão foi encontrada, por favor leia o QR-Code para conectar o Whatsapp.
+
+[2025-03-21T20:59:59.720Z] [2025-03-21T20:59:59.720Z] [UNKNOWN] Erro ao verificar status: Cannot read properties of null (reading 'isConnected')
+TypeError: Cannot read properties of null (reading 'isConnected')
+    at StatusServerWpp (file:///C:/electron-wpp-server/src/whatsapp/api/client.js:428:45)
+    at file:///C:/electron-wpp-server/src/whatsapp/api/server.js:102:30
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\electron-wpp-server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\electron-wpp-server\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\electron-wpp-server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\index.js:280:10)
+    at jsonParser (C:\electron-wpp-server\node_modules\body-parser\lib\types\json.js:113:7)
+
+[2025-03-21T21:00:15.149Z] [2025-03-21T21:00:15.149Z] [UNKNOWN] Erro ao verificar status: Cannot read properties of null (reading 'isConnected')
+TypeError: Cannot read properties of null (reading 'isConnected')
+    at StatusServerWpp (file:///C:/electron-wpp-server/src/whatsapp/api/client.js:428:45)
+    at file:///C:/electron-wpp-server/src/whatsapp/api/server.js:102:30
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\electron-wpp-server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\electron-wpp-server\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\electron-wpp-server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\index.js:280:10)
+    at jsonParser (C:\electron-wpp-server\node_modules\body-parser\lib\types\json.js:113:7)
+
+[2025-03-21T21:00:29.724Z] [2025-03-21T21:00:29.723Z] [UNKNOWN] Erro ao verificar status: Cannot read properties of null (reading 'isConnected')
+TypeError: Cannot read properties of null (reading 'isConnected')
+    at StatusServerWpp (file:///C:/electron-wpp-server/src/whatsapp/api/client.js:428:45)
+    at file:///C:/electron-wpp-server/src/whatsapp/api/server.js:102:30
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\electron-wpp-server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\electron-wpp-server\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\electron-wpp-server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\index.js:280:10)
+    at jsonParser (C:\electron-wpp-server\node_modules\body-parser\lib\types\json.js:113:7)
+
+[2025-03-21T21:00:44.875Z] [2025-03-21T21:00:44.874Z] [UNKNOWN] Erro ao verificar status: Cannot read properties of null (reading 'isConnected')
+TypeError: Cannot read properties of null (reading 'isConnected')
+    at StatusServerWpp (file:///C:/electron-wpp-server/src/whatsapp/api/client.js:428:45)
+    at file:///C:/electron-wpp-server/src/whatsapp/api/server.js:102:30
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\electron-wpp-server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\electron-wpp-server\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\electron-wpp-server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\index.js:280:10)
+    at jsonParser (C:\electron-wpp-server\node_modules\body-parser\lib\types\json.js:113:7)
+
+[2025-03-21T21:00:59.761Z] [2025-03-21T21:00:59.761Z] [UNKNOWN] Erro ao verificar status: Cannot read properties of null (reading 'isConnected')
+TypeError: Cannot read properties of null (reading 'isConnected')
+    at StatusServerWpp (file:///C:/electron-wpp-server/src/whatsapp/api/client.js:428:45)
+    at file:///C:/electron-wpp-server/src/whatsapp/api/server.js:102:30
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\electron-wpp-server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\electron-wpp-server\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\electron-wpp-server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\index.js:280:10)
+    at jsonParser (C:\electron-wpp-server\node_modules\body-parser\lib\types\json.js:113:7)
+
+[2025-03-21T21:01:14.780Z] [2025-03-21T21:01:14.779Z] [UNKNOWN] Erro ao verificar status: Cannot read properties of null (reading 'isConnected')
+TypeError: Cannot read properties of null (reading 'isConnected')
+    at StatusServerWpp (file:///C:/electron-wpp-server/src/whatsapp/api/client.js:428:45)
+    at file:///C:/electron-wpp-server/src/whatsapp/api/server.js:102:30
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\electron-wpp-server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\electron-wpp-server\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\electron-wpp-server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\index.js:280:10)
+    at jsonParser (C:\electron-wpp-server\node_modules\body-parser\lib\types\json.js:113:7)
+
+[2025-03-21T21:01:30.066Z] [2025-03-21T21:01:30.066Z] [UNKNOWN] Erro ao verificar status: Cannot read properties of null (reading 'isConnected')
+TypeError: Cannot read properties of null (reading 'isConnected')
+    at StatusServerWpp (file:///C:/electron-wpp-server/src/whatsapp/api/client.js:428:45)
+    at file:///C:/electron-wpp-server/src/whatsapp/api/server.js:102:30
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\electron-wpp-server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\electron-wpp-server\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\electron-wpp-server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\index.js:280:10)
+    at jsonParser (C:\electron-wpp-server\node_modules\body-parser\lib\types\json.js:113:7)
+
+[2025-03-21T21:01:45.231Z] [2025-03-21T21:01:45.230Z] [UNKNOWN] Erro ao verificar status: Cannot read properties of null (reading 'isConnected')
+TypeError: Cannot read properties of null (reading 'isConnected')
+    at StatusServerWpp (file:///C:/electron-wpp-server/src/whatsapp/api/client.js:428:45)
+    at file:///C:/electron-wpp-server/src/whatsapp/api/server.js:102:30
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\electron-wpp-server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\electron-wpp-server\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\electron-wpp-server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\index.js:280:10)
+    at jsonParser (C:\electron-wpp-server\node_modules\body-parser\lib\types\json.js:113:7)
+
+[2025-03-21T21:01:59.925Z] [2025-03-21T21:01:59.925Z] [UNKNOWN] Erro ao verificar status: Cannot read properties of null (reading 'isConnected')
+TypeError: Cannot read properties of null (reading 'isConnected')
+    at StatusServerWpp (file:///C:/electron-wpp-server/src/whatsapp/api/client.js:428:45)
+    at file:///C:/electron-wpp-server/src/whatsapp/api/server.js:102:30
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\electron-wpp-server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\electron-wpp-server\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\electron-wpp-server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\index.js:280:10)
+    at jsonParser (C:\electron-wpp-server\node_modules\body-parser\lib\types\json.js:113:7)
+
+[2025-03-21T21:02:14.858Z] [2025-03-21T21:02:14.857Z] [UNKNOWN] Erro ao verificar status: Cannot read properties of null (reading 'isConnected')
+TypeError: Cannot read properties of null (reading 'isConnected')
+    at StatusServerWpp (file:///C:/electron-wpp-server/src/whatsapp/api/client.js:428:45)
+    at file:///C:/electron-wpp-server/src/whatsapp/api/server.js:102:30
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\electron-wpp-server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\electron-wpp-server\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\electron-wpp-server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\index.js:280:10)
+    at jsonParser (C:\electron-wpp-server\node_modules\body-parser\lib\types\json.js:113:7)
+
+[2025-03-21T21:02:29.834Z] [2025-03-21T21:02:29.833Z] [UNKNOWN] Erro ao verificar status: Cannot read properties of null (reading 'isConnected')
+TypeError: Cannot read properties of null (reading 'isConnected')
+    at StatusServerWpp (file:///C:/electron-wpp-server/src/whatsapp/api/client.js:428:45)
+    at file:///C:/electron-wpp-server/src/whatsapp/api/server.js:102:30
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\electron-wpp-server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\electron-wpp-server\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\electron-wpp-server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\index.js:280:10)
+    at jsonParser (C:\electron-wpp-server\node_modules\body-parser\lib\types\json.js:113:7)
+
+[2025-03-21T21:04:00.081Z] [2025-03-21T21:04:00.081Z] [UNKNOWN] Erro ao verificar status: Cannot read properties of null (reading 'isConnected')
+TypeError: Cannot read properties of null (reading 'isConnected')
+    at StatusServerWpp (file:///C:/electron-wpp-server/src/whatsapp/api/client.js:428:45)
+    at file:///C:/electron-wpp-server/src/whatsapp/api/server.js:102:30
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\electron-wpp-server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\electron-wpp-server\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\electron-wpp-server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\index.js:280:10)
+    at jsonParser (C:\electron-wpp-server\node_modules\body-parser\lib\types\json.js:113:7)
+
+[2025-03-21T21:04:09.931Z] [2025-03-21T21:04:09.930Z] [QR_CODE] O QR Code foi gerado, mas o celular está desconectado. Conecte o WhatsApp no celular e tente novamente.
+
+[2025-03-21T21:04:12.028Z] [2025-03-21T21:04:12.028Z] [QR_CODE] Nenhuma sessão foi encontrada, por favor leia o QR-Code para conectar o Whatsapp.
+
+[2025-03-21T21:04:14.882Z] [2025-03-21T21:04:14.881Z] [UNKNOWN] Erro ao verificar status: Cannot read properties of null (reading 'isConnected')
+TypeError: Cannot read properties of null (reading 'isConnected')
+    at StatusServerWpp (file:///C:/electron-wpp-server/src/whatsapp/api/client.js:428:45)
+    at file:///C:/electron-wpp-server/src/whatsapp/api/server.js:102:30
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\electron-wpp-server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\electron-wpp-server\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\electron-wpp-server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\index.js:280:10)
+    at jsonParser (C:\electron-wpp-server\node_modules\body-parser\lib\types\json.js:113:7)
+
+[2025-03-21T21:04:29.921Z] [2025-03-21T21:04:29.920Z] [UNKNOWN] Erro ao verificar status: Cannot read properties of null (reading 'isConnected')
+TypeError: Cannot read properties of null (reading 'isConnected')
+    at StatusServerWpp (file:///C:/electron-wpp-server/src/whatsapp/api/client.js:428:45)
+    at file:///C:/electron-wpp-server/src/whatsapp/api/server.js:102:30
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\electron-wpp-server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\electron-wpp-server\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\electron-wpp-server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\index.js:280:10)
+    at jsonParser (C:\electron-wpp-server\node_modules\body-parser\lib\types\json.js:113:7)
+
+[2025-03-21T21:04:44.910Z] [2025-03-21T21:04:44.909Z] [UNKNOWN] Erro ao verificar status: Cannot read properties of null (reading 'isConnected')
+TypeError: Cannot read properties of null (reading 'isConnected')
+    at StatusServerWpp (file:///C:/electron-wpp-server/src/whatsapp/api/client.js:428:45)
+    at file:///C:/electron-wpp-server/src/whatsapp/api/server.js:102:30
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\electron-wpp-server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\electron-wpp-server\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\electron-wpp-server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\index.js:280:10)
+    at jsonParser (C:\electron-wpp-server\node_modules\body-parser\lib\types\json.js:113:7)
+
+[2025-03-21T21:05:00.676Z] [2025-03-21T21:05:00.676Z] [UNKNOWN] Erro ao verificar status: Cannot read properties of null (reading 'isConnected')
+TypeError: Cannot read properties of null (reading 'isConnected')
+    at StatusServerWpp (file:///C:/electron-wpp-server/src/whatsapp/api/client.js:428:45)
+    at file:///C:/electron-wpp-server/src/whatsapp/api/server.js:102:30
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\electron-wpp-server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\electron-wpp-server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\electron-wpp-server\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\electron-wpp-server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\electron-wpp-server\node_modules\express\lib\router\index.js:280:10)
+    at jsonParser (C:\electron-wpp-server\node_modules\body-parser\lib\types\json.js:113:7)
+
+[2025-03-21T22:03:24.662Z] [2025-03-21T22:03:24.660Z] [QR_CODE] O QR Code foi gerado, mas o celular está desconectado. Conecte o WhatsApp no celular e tente novamente.
+
+[2025-03-21T22:03:25.753Z] [2025-03-21T22:03:25.753Z] [QR_CODE] Nenhuma sessão foi encontrada, por favor leia o QR-Code para conectar o Whatsapp.
+
+[2025-03-21T22:04:40.861Z] [2025-03-21T22:04:40.860Z] [QR_CODE] O QR Code foi gerado, mas o celular está desconectado. Conecte o WhatsApp no celular e tente novamente.
+
+[2025-03-21T22:04:44.022Z] [2025-03-21T22:04:44.021Z] [QR_CODE] Nenhuma sessão foi encontrada, por favor leia o QR-Code para conectar o Whatsapp.
+

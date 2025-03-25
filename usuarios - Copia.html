@@ -1,0 +1,360 @@
+<!-- usuario.html -->
+<div class="wrapper">
+    <div class="container">
+        <div class="content">
+            <h1>Usuários Pendentes de Atendimento</h1>
+            <div class="filter-container">
+                <div class="search-box">
+                    <ion-icon name="search-outline"></ion-icon>
+                    <input type="text" id="filter-input" placeholder="Pesquisar por um atendimento">
+                </div>
+                <button id="filter-button">Filtrar</button>
+            </div>
+            <div class="users-list" id="users-list">
+                <!-- Dados dos usuários serão inseridos aqui -->
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+
+    .wrapper {
+        width: 100%;
+        height: 100%;
+        margin: auto;
+        /* background: white; */
+        padding: 20px;
+    }
+
+    .container {
+        background-color: #fff;
+        display: flex;
+        overflow: hidden;
+    }
+
+    .content {
+        padding: 20px;
+        margin: auto;
+    }
+
+    h1 {
+        color: #008069;
+        font-size: 24px;
+        margin-bottom: 20px;
+        font-weight: 600;
+        text-align: center;
+    }
+
+    .filter-container {
+        display: flex;
+        margin-bottom: 20px;
+        align-items: center;
+    }
+
+    .search-box {
+        flex-grow: 1;
+        position: relative;
+        margin-right: 10px;
+    }
+
+    .search-box ion-icon {
+        position: absolute;
+        left: 12px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #54656f;
+        font-size: 20px;
+    }
+
+    #filter-input {
+        width: 100%;
+        padding: 10px 10px 10px 40px;
+        font-size: 15px;
+        border: none;
+        border-radius: 8px;
+        background-color: var(--card-bg);
+        transition: background-color 0.3s;
+    }
+
+    #filter-input:focus {
+        outline: none;
+        background-color: var(--card-bg);
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+        
+    }
+
+    #filter-button {
+        padding: 10px 20px;
+        font-size: 15px;
+        background-color: #008069;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    #filter-button:hover {
+        background-color: #006e5a;
+    }
+
+    .users-list {
+        background-color: #ffffff;
+        border-radius: 8px;
+        overflow: hidden;
+        max-height: 60vh;
+        overflow-y: auto;
+    }
+
+    .user-item {
+        display: flex;
+        align-items: center;
+        padding: 15px;
+        border-bottom: 1px solid #f0f2f5;
+        transition: background-color 0.3s;
+        cursor: pointer;
+    }
+
+    .user-item:hover {
+        background-color: #f5f6f6;
+    }
+
+    .user-item:last-child {
+        border-bottom: none;
+    }
+
+    .user-avatar {
+        width: 49px;
+        height: 49px;
+        border-radius: 50%;
+        background-color: #00a884;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 20px;
+        font-weight: 600;
+        margin-right: 15px;
+        flex-shrink: 0;
+    }
+
+    .user-info {
+        flex-grow: 1;
+        min-width: 0;
+    }
+
+    .user-name {
+        font-weight: 600;
+        margin-bottom: 5px;
+        color: #111b21;
+    }
+
+    .user-message {
+        color: #667781;
+        font-size: 14px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .user-phone {
+        font-size: 12px;
+        color: #667781;
+        margin-top: 2px;
+    }
+
+    .user-meta {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        margin-left: 15px;
+        min-width: 65px;
+    }
+
+    .user-date {
+        font-size: 12px;
+        color: #667781;
+        margin-bottom: 5px;
+    }
+
+    .switch {
+        position: relative;
+        display: inline-block;
+        width: 40px;
+        height: 20px;
+    }
+
+    .switch input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+
+    .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #ccc;
+        transition: .4s;
+        border-radius: 20px;
+    }
+
+    .slider:before {
+        position: absolute;
+        content: "";
+        height: 16px;
+        width: 16px;
+        left: 2px;
+        bottom: 2px;
+        background-color: white;
+        transition: .4s;
+        border-radius: 50%;
+    }
+
+    input:checked + .slider {
+        background-color: #00a884;
+    }
+
+    input:checked + .slider:before {
+        transform: translateX(20px);
+    }
+
+    /* Scrollbar Styling */
+    .users-list::-webkit-scrollbar {
+        width: 6px;
+    }
+
+    .users-list::-webkit-scrollbar-track {
+        background: #f1f1f1;
+    }
+
+    .users-list::-webkit-scrollbar-thumb {
+        background: #888;
+        border-radius: 3px;
+    }
+
+    .users-list::-webkit-scrollbar-thumb:hover {
+        background: #555;
+    }
+
+    /* Melhorias adicionais */
+    .user-item.unread .user-name {
+        font-weight: 700;
+    }
+
+    .user-item.unread .user-message {
+        font-weight: 600;
+        color: #111b21;
+    }
+</style>
+
+<script>
+    // usersData definido apenas uma vez e nunca mais sobrescrito
+    let usersData = {}; 
+
+    window.updateStatus = async function (number, status) {
+        if (usersData[number]) {
+            usersData[number].status = status;
+            const response = await window.updateStatusHistory(number, status);
+            notyf.success(response.success);
+        }
+    };
+
+    async function loadUserData() {
+        const newData = await window.getHistory(); // Obtém os novos dados
+        Object.assign(usersData, newData); // Atualiza sem redefinir a variável
+
+        const usersList = document.getElementById("users-list");
+        const filterInput = document.getElementById("filter-input");
+        const filterButton = document.getElementById("filter-button");
+
+        function createUserItem(number, userData) {
+            const userItem = document.createElement("div");
+            userItem.className = `user-item ${userData.unread ? "unread" : ""}`;
+            userItem.innerHTML = `
+                <div class="user-avatar">${userData.nome[0]}</div>
+                <div class="user-info">
+                    <div class="user-name">${userData.nome}</div>
+                    <div class="user-message">${userData.mensagem}</div>
+                    <div class="user-phone">${formatPhoneNumber(number)}</div>
+                </div>
+                <div class="user-meta">
+                    <div class="user-date">${formatDate(userData.data)}</div>
+                    <label class="switch">
+                        <input type="checkbox" data-number="${number}" ${userData.status ? "checked" : ""}>
+                        <span class="slider"></span>
+                    </label>
+                </div>
+            `;
+            return userItem;
+        }
+
+        function formatPhoneNumber(number) {
+            return number.split("@")[0].replace(/(\d{2})(\d{2})(\d{4,5})(\d{4})/, "+$1 ($2) $3-$4");
+        }
+
+        function formatDate(dateString) {
+            const date = new Date(dateString);
+            const today = new Date();
+            const yesterday = new Date(today);
+            yesterday.setDate(yesterday.getDate() - 1);
+
+            if (date.toDateString() === today.toDateString()) {
+                return date.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" });
+            } else if (date.toDateString() === yesterday.toDateString()) {
+                return "Ontem";
+            } else {
+                return date.toLocaleDateString();
+            }
+        }
+
+        function renderUsers(users) {
+            usersList.innerHTML = "";
+            Object.entries(users).forEach(([number, userData]) => {
+                const userItem = createUserItem(number, userData);
+                usersList.appendChild(userItem);
+
+                const checkbox = userItem.querySelector(`input[type="checkbox"]`);
+                checkbox.addEventListener("change", (event) => {
+                    updateStatus(number, event.target.checked);
+                });
+            });
+        }
+
+        function filterUsers() {
+            const filterValue = filterInput.value.toLowerCase();
+            const filteredUsers = Object.entries(usersData).filter(([number, userData]) => {
+                return number.toLowerCase().includes(filterValue) ||
+                    userData.nome.toLowerCase().includes(filterValue) ||
+                    userData.mensagem.toLowerCase().includes(filterValue);
+            });
+
+            renderUsers(Object.fromEntries(filteredUsers));
+        }
+
+        function handleKeyUp(event) {
+            if (event.key === "Enter") {
+                filterUsers();
+            }
+        }
+
+        renderUsers(usersData);
+
+        filterButton.removeEventListener("click", filterUsers);
+        filterButton.addEventListener("click", filterUsers);
+
+        filterInput.removeEventListener("keyup", handleKeyUp);
+        filterInput.addEventListener("keyup", handleKeyUp);
+    }
+
+    loadUserData();
+    setInterval(loadUserData, 5000);
+</script>
+
+
+
+

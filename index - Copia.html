@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servidor WPPConnect 1.1.0</title>
+    <link rel="stylesheet" href="style/style.css">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/notyf/notyf.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/notyf/notyf.min.js"></script>
+
+    <!-- Favicon -->
+    <link rel="icon" href="icon.ico" type="image/x-icon">
+</head>
+<body>
+    <!-- Container para os toasts de inicialização -->
+    <div id="toast-container" class="toast-container"></div>
+
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <h2>Servidor WPP</h2>
+            <button id="toggle-sidebar" class="toggle-sidebar">
+                <ion-icon name="menu-outline"></ion-icon>
+            </button>
+        </div>
+        <a href="#" id="conexao-link" class="sidebar-link">
+            <ion-icon name="link-outline"></ion-icon>
+            <span>Conexão</span>
+        </a>
+        <a href="#" id="usuario-link" class="sidebar-link">
+            <ion-icon name="people-outline"></ion-icon>
+            <span>Atendimentos</span>
+        </a>
+        <a href="#" id="configuracao-link" class="sidebar-link">
+            <ion-icon name="settings-outline"></ion-icon>
+            <span>Configuração</span>
+        </a>
+    </div>
+
+    <div class="content" id="content-area">
+        <h1>Bem-vindo ao Servidor de Comunicação</h1>
+        <p>Escolha uma opção no menu.</p>
+    </div>
+    
+    <!-- Botão de configuração flutuante -->
+    <button id="config-button" class="config-button">
+        <ion-icon name="cog-outline"></ion-icon>
+    </button>
+    
+    <!-- Popup de configuração -->
+    <div id="config-popup" class="config-popup">
+        <div class="config-popup-header">
+            <h3>Configurações Rápidas</h3>
+        </div>
+        <div class="config-popup-content">
+            <div class="toggle-option">
+                <span>Utilizar Google Chrome</span>
+                <label class="toggle">
+                    <input type="checkbox" id="useChrome">
+                    <span class="toggle-slider"></span>
+                </label>
+            </div>
+            <div class="toggle-option">
+                <span>Modo Invisível</span>
+                <label class="toggle">
+                    <input type="checkbox" id="headless">
+                    <span class="toggle-slider"></span>
+                </label>
+            </div>
+            <!-- Button Dark Mode -->
+            <div class="theme-toggle-container">
+                <button id="theme-toggle" class="theme-button">
+                  <ion-icon id="theme-icon" name="sunny-outline"></ion-icon>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="src/renderer.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const themeButton = document.getElementById("theme-toggle");
+            const themeIcon = document.getElementById("theme-icon");
+
+            let savedTheme = localStorage.getItem("theme") || "light-mode";
+            document.body.classList.add(savedTheme);
+
+            themeIcon.setAttribute("name", savedTheme === "dark-mode" ? "moon-outline" : "sunny-outline");
+
+            themeButton.addEventListener("click", () => {
+                document.body.classList.toggle("dark-mode");
+                document.body.classList.toggle("light-mode");
+
+                // Define o novo tema
+                let newTheme = document.body.classList.contains("dark-mode") ? "dark-mode" : "light-mode";
+
+                // Atualiza o ícone do botão
+                themeIcon.setAttribute("name", newTheme === "dark-mode" ? "moon-outline" : "sunny-outline");
+
+                localStorage.setItem("theme", newTheme);
+                });
+            });
+
+        document.addEventListener("DOMContentLoaded", async () => {
+            // Elementos do popup de configuração
+            const configButton = document.getElementById("config-button")
+            const configPopup = document.getElementById("config-popup")
+            const useChromeToogle = document.getElementById("useChrome")
+            const headlessToogle = document.getElementById("headless")
+    
+            try {
+                const savedConfig = await window.getConfig();
+                
+                // Inicializar os toggles com valores do savedConfig, padrão: false
+                useChromeToogle.checked = savedConfig.useChrome ?? false;
+                headlessToogle.checked = savedConfig.headless ?? false;
+            } catch (error) {
+                console.error(error);
+                notyf.error('Não foi possível carregar informações antigas');
+            }
+    
+            // Mostrar/esconder o popup quando clicar no botão de configuração
+            configButton.addEventListener("click", (e) => {
+                e.stopPropagation() // Impede que o evento de clique se propague
+                configPopup.classList.toggle("show")
+            })
+    
+            // Fechar o popup quando clicar fora dele
+            document.addEventListener("click", (e) => {
+                if (!configPopup.contains(e.target) && e.target !== configButton) {
+                    configPopup.classList.remove("show")
+                }
+            })
+    
+            // Impedir que cliques dentro do popup fechem ele
+            configPopup.addEventListener("click", (e) => {
+                e.stopPropagation()
+            })
+    
+            // Salvar as configurações quando os toggles forem alterados
+            useChromeToogle.addEventListener("change", async function () {
+                const json = {
+                    useChrome: this.checked
+                }
+                const response = await window.updateConfig(json);
+                notyf.success(response);
+            })
+    
+            headlessToogle.addEventListener("change", async function () {
+                const json = {
+                    headless: this.checked
+                }
+                const response = await window.updateConfig(json);
+                notyf.success(response);
+            })
+    
+        })
+    </script>
+    
+</body>
+</html>
+

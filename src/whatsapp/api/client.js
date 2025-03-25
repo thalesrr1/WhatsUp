@@ -29,6 +29,7 @@ const errorDiagnostic = {
     errorCategories: {
         PUPPETEER: 'Problema com Puppeteer',
         CHROMIUM: 'Problema com Chromium',
+        GPU: 'Problema com GPU',
         WPPCONNECT: 'Problema com WPPConnect',
         NETWORK: 'Problema de Rede',
         QR_CODE: 'Problema com QR Code',
@@ -42,7 +43,8 @@ const errorDiagnostic = {
         { regex: /net::ERR|network|timeout|timed out|ECONNREFUSED/i, category: 'NETWORK' },
         { regex: /session|auth|token|logged/i, category: 'SESSION' },
         { regex: /qr|scan|code/i, category: 'QR_CODE' },
-        { regex: /wppconnect|whatsapp|wa|message/i, category: 'WPPCONNECT' }
+        { regex: /wppconnect|whatsapp|wa|message/i, category: 'WPPCONNECT' },
+        { regex: /gpu|command_buffer|CreateCommandBuffer/i, category: 'GPU' }
     ],
     
     // Identifica a categoria do erro com base na mensagem
@@ -112,6 +114,9 @@ const errorDiagnostic = {
             case 'SESSION':
                 return 'Apague a pasta ./src/whatsapp/api/tokens e reinicie a aplicação para iniciar uma nova sessão. Ou clique em limpar sessão na aba de conexões e aguarde.';
                 
+            case 'GPU':
+                return 'Desative a opção "Usar Chrome" no canto inferior direito da aplicação. O navegador não suporta aceleração de GPU. Após desativar, reinicie o aplicativo.';
+
             default:
                 return 'Tente reiniciar a aplicação. Se o problema persistir, reinstale as dependências: npm uninstall puppeteer @wppconnect-team/wppconnect && npm install puppeteer @wppconnect-team/wppconnect';
         }
@@ -142,9 +147,32 @@ const errorDiagnostic = {
     }
 };
 
+// Função para enviar atualizações para o frontend
+function sendToRenderer(event, data) {
+    BrowserWindow.getAllWindows().forEach(window => {
+        if (!window.isDestroyed()) {
+        window.webContents.send(event, data);
+        }
+    });
+}
+
 async function startClient() {
     try {
+        // Enviar evento de início da inicialização
+        sendToRenderer('wpp-init-start', {
+            message: 'Iniciando processo de inicialização do WhatsApp...',
+            progress: 5
+        });
+
         let config = global.store.get('config') || {};
+        
+        // Enviar evento de configuração carregada
+        sendToRenderer('wpp-init-step', {
+            message: 'Configurações carregadas',
+            progress: 10,
+            completed: true
+        });
+
         global.clientWpp = await wppconnect.create({
             session: 'whatsUp', // Nome da sessão
             catchQR: (base64Qr, asciiQR) => {
@@ -161,12 +189,76 @@ async function startClient() {
                 fs.writeFile('./src/whatsapp/api/image/qrCode.png', response.data, 'binary', (err) => {
                     if (err) console.log(err);
                 });
+                
+                // Enviar evento de QR Code gerado
+                sendToRenderer('wpp-init-step', {
+                    message: 'QR Code gerado. Aguardando leitura...',
+                    progress: 100,
+                    completed: true
+                });
             },
             logQR: false,
             statusFind: (statusSession, session) => {
                 console.log(`Status da Sessão: ${statusSession} - ${session}`);
                 connectionStatus = statusSession;
                 lastUpdate = new Date().toLocaleString();
+
+                // Enviar evento de atualização de status
+                let statusProgress = 0;
+                let statusCompleted = false;
+                let statusMessage = '';
+                let statusType = 'loading';
+            
+                switch (statusSession) {
+                    case 'isLogged':
+                        statusProgress = 100;
+                        statusCompleted = true;
+                        statusMessage = 'Cliente logado com sucesso.';
+                        statusType = 'success';
+                        break;
+                    case 'notLogged':
+                        statusProgress = 100;
+                        statusCompleted = true;
+                        statusMessage = 'Cliente carregado, aguardando leitura do QR-Code.';
+                        statusType = 'success';
+                        break;
+                    case 'qrReadSuccess':
+                        statusProgress = 100;
+                        statusCompleted = true;
+                        statusMessage = 'QR-Code lido com sucesso.';
+                        statusType = 'success';
+                        break;
+                    case 'qrReadError':
+                        statusProgress = 75;
+                        statusMessage = 'Erro ao ler o QR-Code.';
+                        statusType = 'error';
+                        break;
+                    case 'autocloseCalled':
+                        statusProgress = 50;
+                        statusMessage = 'O WppConnect foi fechado, reinicie.';
+                        statusType = 'error';
+                        break;
+                    case 'desconnectedMobile':
+                        statusMessage = 'Leia o QR-Code para continuar.';
+                        statusCompleted = true;
+                        statusProgress = 100;
+                        break;
+                    case 'inChat':
+                        statusProgress = 100;
+                        statusMessage = 'Cliente conectado e ouvindo.';
+                        statusCompleted = true;
+                        statusType = 'success';
+                        break;
+                    default:
+                        statusProgress = 100;
+                }
+                
+                sendToRenderer('wpp-init-step', {
+                    message: statusMessage,
+                    progress: statusProgress,
+                    completed: statusCompleted,
+                    type: statusType
+                });
 
                 // Verificar status problemáticos
                 if (['notLogged', 'browserClose', 'qrReadError', 'autocloseCalled', 'desconnectedMobile', 'isConnected'].includes(statusSession)) {
@@ -205,6 +297,14 @@ async function startClient() {
 
                         // Adiciona o erro diagnosticado com a mensagem específica
                         errorDiagnostic.addError(message, null, 'status');
+                        
+                        // Enviar mensagem de erro para o renderer
+                        if (statusSession !== 'isConnected' && statusSession !== 'notLogged') {
+                            sendToRenderer('wpp-init-error', {
+                                message: message,
+                                type: 'error'
+                            });
+                        }
                     }
                 }
             },
@@ -230,9 +330,23 @@ async function startClient() {
             keepAlive: true // Mantém a sessão ativa
         });
 
+        // Enviar evento de cliente criado
+        sendToRenderer('wpp-init-step', {
+            message: 'Cliente WhatsApp criado com sucesso',
+            progress: 100,
+            completed: true
+        });
+
         // Evento para reconectar caso desconecte
         global.clientWpp.onStateChange((state) => {
             console.log(`Estado da conexão: ${state}`);
+            
+            // Enviar evento de mudança de estado
+            sendToRenderer('wpp-state-change', {
+                state: state,
+                timestamp: new Date().toLocaleString()
+            });
+            
             const estadosProblema = ['CONFLICT', 'UNPAIRED', 'UNPAIRED_IDLE', 'DISCONNECTED'];
 
             if (estadosProblema.includes(state)) {
@@ -245,6 +359,12 @@ async function startClient() {
                     'state'
                 );
                 
+                // Enviar evento de erro
+                sendToRenderer('wpp-init-error', {
+                    message: `Estado problemático da conexão: ${state}`,
+                    type: 'error'
+                });
+                
                 setTimeout(() => startClient(), 5000);
             }
         });
@@ -252,6 +372,13 @@ async function startClient() {
         // Verifica mudanças na conexão (útil para detectar quedas)
         global.clientWpp.onStreamChange((state) => {
             console.log(`Estado do stream: ${state}`);
+            
+            // Enviar evento de mudança de stream
+            sendToRenderer('wpp-stream-change', {
+                state: state,
+                timestamp: new Date().toLocaleString()
+            });
+            
             if (state === 'DISCONNECTED' || state === 'SYNCING') {
                 console.log('Desconectado, tentando reconectar...');
                 
@@ -262,6 +389,12 @@ async function startClient() {
                         null, 
                         'stream'
                     );
+                    
+                    // Enviar evento de erro
+                    sendToRenderer('wpp-init-error', {
+                        message: `Stream desconectado: ${state}`,
+                        type: 'error'
+                    });
                 }
 
                 setTimeout(() => startClient(), 5000);
@@ -286,6 +419,19 @@ async function startClient() {
                 }
             });
         }
+        
+        // Enviar evento de inicialização concluída
+        sendToRenderer('wpp-init-complete', {
+            message: 'Inicialização do WhatsApp concluída com sucesso!',
+            progress: 100,
+            type: 'success'
+        });
+
+        // Fechar popup ao atingir 100% e exibir toast de sucesso
+        sendToRenderer('close-popup', {
+            message: 'WhatsApp pronto para uso.',
+            type: 'success'
+        });
 
     } catch (error) {
         console.log('Erro ao iniciar:', error);
@@ -295,6 +441,13 @@ async function startClient() {
             error.stack, 
             'initialization'
         );
+        
+        // Enviar evento de erro
+        sendToRenderer('wpp-init-error', {
+            message: `Falha ao inicializar o cliente: ${error.message}`,
+            error: error.stack || error.toString(),
+            type: 'error'
+        });
         
         logError(error.stack || error);
     }
@@ -661,7 +814,7 @@ ipcMain.handle('repair-whatsapp', async (event) => {
         console.log("Desinstalando pacotes...");
         
         await new Promise((resolve, reject) => {
-            exec('npm uninstall @wppconnect-team/wppconnect puppeteer', { timeout: 60000 }, (error, stdout, stderr) => {
+            exec('npm uninstall @wppconnect-team/wppconnect puppeteer', { timeout: 240000 }, (error, stdout, stderr) => {
                 if (error && !stderr.includes("npm WARN")) {
                     console.error(`Erro na desinstalação: ${error.message}`);
                     reject(error);
@@ -676,7 +829,7 @@ ipcMain.handle('repair-whatsapp', async (event) => {
         console.log("Limpando cache do npm...");
         
         await new Promise((resolve, reject) => {
-            exec('npm cache clean --force', { timeout: 30000 }, (error, stdout, stderr) => {
+            exec('npm cache clean --force', { timeout: 240000 }, (error, stdout, stderr) => {
                 if (error) {
                     console.log(`Aviso na limpeza do cache: ${error.message}`);
                     // Não rejeita, apenas continua
@@ -692,7 +845,7 @@ ipcMain.handle('repair-whatsapp', async (event) => {
         await new Promise((resolve, reject) => {
             // Instalar sempre as versões mais recentes (latest)
             exec('npm install @wppconnect-team/wppconnect@latest puppeteer@latest', 
-                { timeout: 180000 }, // Tempo maior para download e instalação
+                { timeout: 240000 }, // Tempo maior para download e instalação
                 (error, stdout, stderr) => {
                     if (error) {
                         console.error(`Erro na instalação: ${error.message}`);

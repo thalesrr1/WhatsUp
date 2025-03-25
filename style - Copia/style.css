@@ -1,0 +1,917 @@
+/* Reset de estilos básicos */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Variáveis de cores */
+:root {
+  --color-bg-main: #f0f2f5;
+  --color-bg-sidebar: #ffffff;
+  --primary-color: #00a884;
+  --color-text-primary: #111b21;
+  --color-text-secondary: #667781;
+  --color-accent: #00a884;
+  --color-hover: #f5f6f6;
+  --bg-light: #f0f2f5;
+  --bg-white: #ffffff;
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+  .dark-mode {
+    --color-bg-main: #232D36;
+    --color-bg-sidebar: #101D25;
+    --primary-color: #00a884;
+    --color-text-primary: #f0f2f5;
+    --color-text-secondary: #8899a6;
+    --color-accent: #00a884;
+    --color-hover: #1a2b3c;
+    --bg-light: #211111;
+    --bg-white: #1a2b3c;
+    --border-color: #9FA2A7;
+  /* Variaveis cor card */
+    --card-bg: #2e4052;
+    --color-input:  #3c4f63;   /* Variaveis background input*/
+  }
+
+/* Corpo da página */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  height: 100vh;
+  background-color: var(--color-bg-main);
+  overflow: hidden;
+}
+
+  input {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--color-text-primary);
+  }
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: var(--color-text-primary);
+}
+
+/* Sidebar */
+.sidebar {
+  width: 250px;
+  background-color: var(--color-bg-sidebar);
+  color: var(--color-text-primary);
+  display: flex;
+  flex-direction: column;
+  transition: width 0.3s ease;
+  overflow-x: hidden;
+  border-right: 1px solid #e9edef;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 1000;
+}
+
+.sidebar.collapsed {
+  width: 60px;
+}
+
+/* Cabeçalho da sidebar */
+.sidebar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  background-color: var(--color-bg-sidebar);
+  position: relative;
+  height: 60px;
+}
+
+.sidebar-header h2 {
+  font-size: 18px;
+  font-weight: 600;
+  transition: opacity 0.3s ease;
+}
+
+.sidebar.collapsed .sidebar-header h2 {
+  opacity: 0;
+  position: absolute;
+  pointer-events: none;
+}
+
+/* Toggle sidebar */
+.toggle-sidebar {
+  background: none;
+  border: none;
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  font-size: 24px;
+  z-index: 10;
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Links da sidebar */
+.sidebar-link {
+  color: var(--color-text-primary);
+  text-decoration: none;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  transition: background-color 0.3s;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.sidebar-link:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+  transform: scale(1.03);
+}
+
+.sidebar-link ion-icon {
+  font-size: 24px;
+  margin-right: 16px;
+  min-width: 24px;
+}
+
+.sidebar-link span {
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.sidebar.collapsed .sidebar-link span {
+  opacity: 0;
+  transform: translateX(10px);
+}
+
+/* Área de conteúdo */
+.content {
+  flex-grow: 1;
+  padding: 20px;
+  background-color: var(--bg-white);
+  overflow-y: auto;
+  transition: margin-left 0.3s ease;
+  margin-left: 250px; /* Largura inicial para quando a sidebar está aberta */
+  width: calc(100% - 250px); /* Largura total menos a largura da sidebar */
+  height: 100vh;
+  position: relative;
+}
+
+/* Quando a sidebar estiver colapsada */
+.sidebar.collapsed ~ .content {
+  margin-left: 60px;
+  width: calc(100% - 60px); /* Ajusta a largura quando a sidebar está colapsada */
+}
+
+.content h1 {
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin-bottom: 16px;
+}
+
+.content p {
+  font-size: 16px;
+  color: var(--color-text-secondary);
+}
+
+/* Estilos para o conteúdo interno da div content */
+.content-inner {
+  max-width: 1200px; /* ou qualquer largura máxima desejada */
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Media query para telas menores */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 60px;
+  }
+
+  .sidebar.collapsed {
+    width: 0;
+  }
+
+  .content {
+    margin-left: 60px;
+    width: calc(100% - 60px);
+  }
+
+  .sidebar.collapsed ~ .content {
+    margin-left: 0;
+    width: 100%;
+  }
+}
+
+/* Estilizando a barra de rolagem */
+::-webkit-scrollbar {
+  width: 6px; /* Largura da barra de rolagem */
+  height: 6px; /* Largura da barra de rolagem horizontal (se necessário) */
+}
+
+/* Estilo da trilha da barra de rolagem */
+::-webkit-scrollbar-track {
+  background-color: #f0f0f0; /* Cor de fundo da trilha (deixe bem discreta) */
+  border-radius: 10px; /* Cantos arredondados */
+}
+
+/* Estilo do polegar da barra de rolagem (a parte que o usuário arrasta) */
+::-webkit-scrollbar-thumb {
+  background-color: #888; /* Cor do polegar (use um tom neutro ou sutil) */
+  border-radius: 10px; /* Cantos arredondados para o polegar */
+  border: 2px solid #f0f0f0; /* Um pequeno espaço entre o polegar e a trilha */
+}
+
+/* Efeito de hover sobre o polegar */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #555; /* Cor mais escura ao passar o mouse */
+}
+
+/* Botão de configuração flutuante */
+.config-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-md);
+  z-index: 2;
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+.config-button:hover {
+  transform: scale(1.05);
+  background-color: #008f6e;
+}
+
+.config-button ion-icon {
+  font-size: 24px;
+}
+
+/* Popup de configuração */
+.config-popup {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  width: 280px;
+  background-color: var(--bg-white);
+  border-radius: 10px;
+  box-shadow: var(--shadow-md);
+  z-index: 1002;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+  transition: opacity 0.3s, transform 0.3s, visibility 0.3s;
+  overflow: hidden;
+}
+
+.config-popup.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.config-popup::before {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  right: 20px;
+  width: 20px;
+  height: 20px;
+  background-color: var(--bg-white);
+  transform: rotate(45deg);
+  box-shadow: var(--shadow-md);
+  z-index: -1;
+}
+
+.config-popup-header {
+  padding: 15px;
+  border-bottom: 1px solid #e9edef;
+}
+
+.config-popup-header h3 {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin: 0;
+}
+
+.config-popup-content {
+  padding: 15px;
+}
+
+/* Opções de toggle */
+.toggle-option {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.toggle-option:last-child {
+  margin-bottom: 0;
+}
+
+.toggle-option span {
+  font-size: 14px;
+  color: var(--color-text-primary);
+}
+
+/* Estilo do toggle switch */
+.toggle {
+  position: relative;
+  display: inline-block;
+  width: 44px;
+  height: 22px;
+}
+
+.toggle input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.toggle-slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: .4s;
+  border-radius: 34px;
+}
+
+.toggle-slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+input:checked + .toggle-slider {
+  background-color: var(--primary-color);
+}
+
+input:focus + .toggle-slider {
+  box-shadow: 0 0 1px var(--primary-color);
+}
+
+input:checked + .toggle-slider:before {
+  transform: translateX(22px);
+}
+
+/* Estilos button Dark Theme */
+.theme-toggle-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 20px;
+  z-index: 1000;
+}
+
+.theme-button {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+
+/* Estilos para trocar cor botão dark-mode */
+body.light-mode .theme-button {
+  background-color: #f0f0f0;
+  color: #000;
+}
+
+body.dark-mode .theme-button {
+  background-color: #333;
+  color: #fff;
+}
+
+/* Estilos para o painel de diagnóstico */
+.wpp-diagnostic-panel {
+background-color: #fff;
+border-radius: 8px;
+box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+padding: 16px;
+margin-top: 20px;
+margin-bottom: 20px;
+}
+
+.diagnostic-header {
+display: flex;
+justify-content: space-between;
+align-items: center;
+margin-bottom: 16px;
+}
+
+.diagnostic-header h3 {
+margin: 0;
+font-size: 16px;
+font-weight: 600;
+color: #333;
+}
+
+.status-badge {
+padding: 4px 10px;
+border-radius: 12px;
+font-size: 12px;
+font-weight: 500;
+}
+
+.status-badge.connected {
+background-color: #e8f5e9;
+color: #2e7d32;
+}
+
+.status-badge.disconnected {
+background-color: #ffebee;
+color: #c62828;
+}
+
+.status-badge.waiting {
+background-color: #fff8e1;
+color: #f57c00;
+}
+
+.diagnostic-content {
+margin-top: 12px;
+}
+
+.diagnostic-info {
+margin-bottom: 16px;
+}
+
+.info-row {
+display: flex;
+margin-bottom: 8px;
+}
+
+.info-label {
+font-weight: 500;
+color: #555;
+width: 140px;
+flex-shrink: 0;
+}
+
+.info-value {
+color: #333;
+}
+
+.error-panel {
+background-color: #f9f9f9;
+border-radius: 0 0 6px 6px;
+padding: 16px;
+border-left: 4px solid #f44336;
+margin-top: 0;
+border-top: none;
+transition: all 0.3s ease;
+}
+
+.error-header {
+display: flex;
+justify-content: space-between;
+align-items: center;
+margin-bottom: 12px;
+}
+
+.error-title {
+font-weight: 600;
+color: #d32f2f;
+}
+
+.error-time {
+font-size: 12px;
+color: #777;
+}
+
+.error-type-badge {
+display: inline-block;
+padding: 3px 8px;
+background-color: #f44336;
+color: white;
+border-radius: 4px;
+font-size: 12px;
+font-weight: 500;
+margin-bottom: 8px;
+}
+
+.error-message {
+font-size: 14px;
+color: #333;
+margin-bottom: 16px;
+line-height: 1.4;
+}
+
+.suggestion-container {
+background-color: #fff;
+border: 1px solid #e0e0e0;
+border-radius: 4px;
+padding: 12px;
+margin-bottom: 16px;
+}
+
+.suggestion-header {
+font-weight: 500;
+color: #333;
+margin-bottom: 8px;
+}
+
+.suggestion-content {
+font-family: monospace;
+background-color: #f5f5f5;
+padding: 10px;
+border-radius: 4px;
+font-size: 13px;
+margin-bottom: 8px;
+word-break: break-all;
+}
+
+.suggestion-note {
+font-size: 12px;
+color: #666;
+font-style: italic;
+}
+
+.error-actions {
+display: flex;
+justify-content: flex-end;
+gap: 8px;
+}
+
+.btn-primary, .btn-secondary {
+padding: 8px 12px;
+border-radius: 4px;
+font-size: 13px;
+font-weight: 500;
+cursor: pointer;
+border: none;
+transition: all 0.2s ease;
+}
+
+.btn-primary {
+background-color: #00a884;
+color: white;
+}
+
+.btn-primary:hover {
+background-color: #008f6e;
+}
+
+.btn-secondary {
+background-color: #f0f0f0;
+color: #333;
+}
+
+.btn-secondary:hover {
+background-color: #e0e0e0;
+}
+
+/* Modal de histórico */
+.modal {
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-color: rgba(0, 0, 0, 0.5);
+display: flex;
+justify-content: center;
+align-items: center;
+z-index: 1000;
+}
+
+.modal-content {
+background-color: #fff;
+border-radius: 8px;
+width: 80%;
+max-width: 600px;
+max-height: 80vh;
+display: flex;
+flex-direction: column;
+box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.modal-header {
+padding: 16px;
+border-bottom: 1px solid #eee;
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+.modal-header h3 {
+margin: 0;
+font-size: 18px;
+font-weight: 600;
+}
+
+.close-modal {
+font-size: 24px;
+cursor: pointer;
+color: #999;
+}
+
+.modal-body {
+padding: 16px;
+overflow-y: auto;
+flex-grow: 1;
+}
+
+.modal-footer {
+padding: 16px;
+border-top: 1px solid #eee;
+display: flex;
+justify-content: flex-end;
+}
+
+/* Lista de erros no histórico */
+.error-history-item {
+padding: 12px;
+border-bottom: 1px solid #eee;
+margin-bottom: 8px;
+}
+
+.error-history-item:last-child {
+border-bottom: none;
+}
+
+.error-history-header {
+display: flex;
+justify-content: space-between;
+margin-bottom: 8px;
+}
+
+.error-history-type {
+font-weight: 500;
+color: #d32f2f;
+}
+
+.error-history-time {
+font-size: 12px;
+color: #777;
+}
+
+.error-history-message {
+font-size: 14px;
+color: #333;
+margin-bottom: 8px;
+}
+
+.error-history-suggestion {
+font-size: 13px;
+color: #555;
+background-color: #f5f5f5;
+padding: 8px;
+border-radius: 4px;
+margin-top: 8px;
+}
+
+.copy-btn {
+background-color: transparent;
+border: none;
+color: #00a884;
+cursor: pointer;
+font-size: 13px;
+padding: 4px 8px;
+margin-left: 8px;
+}
+
+.copy-btn:hover {
+text-decoration: underline;
+}
+
+/* Adicione estes estilos ao seu CSS existente */
+.error-panel-header {
+background-color: #f5f5f5;
+border-radius: 6px;
+padding: 12px 16px;
+margin-top: 16px;
+cursor: pointer;
+display: flex;
+justify-content: space-between;
+align-items: center;
+border-left: 4px solid #f44336;
+transition: background-color 0.2s ease;
+}
+
+.error-panel-header:hover {
+background-color: #eeeeee;
+}
+
+.error-panel-title {
+font-weight: 600;
+color: #333;
+display: flex;
+align-items: center;
+gap: 8px;
+}
+
+.error-count {
+background-color: #f44336;
+color: white;
+font-size: 12px;
+font-weight: 500;
+padding: 2px 6px;
+border-radius: 10px;
+min-width: 20px;
+text-align: center;
+}
+
+.toggle-icon {
+font-size: 12px;
+color: #666;
+transition: transform 0.3s ease;
+}
+
+.error-panel-header.open .toggle-icon {
+transform: rotate(180deg);
+}
+
+/* Estilos para o toast de inicialização */
+.toast-container {
+position: fixed;
+top: 20px;
+right: 20px;
+z-index: 9999;
+width: 350px; /* Largura fixa */
+font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.toast {
+background-color: white;
+border-radius: 8px;
+box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+margin-bottom: 10px;
+overflow: hidden;
+animation: slideIn 0.3s ease;
+transition: all 0.3s ease;
+border-left: 4px solid #00a884;
+width: 100%; /* Largura total do container */
+}
+
+.toast-header {
+padding: 12px 15px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+border-bottom: 1px solid #f0f0f0;
+height: 50px; /* Altura fixa para o cabeçalho */
+}
+
+.toast-title {
+font-weight: 600;
+font-size: 14px;
+color: #111b21;
+display: flex;
+align-items: center;
+gap: 8px;
+}
+
+.toast-title ion-icon {
+font-size: 18px;
+color: #00a884;
+}
+
+.toast-close {
+background: none;
+border: none;
+color: #667781;
+cursor: pointer;
+font-size: 18px;
+padding: 0;
+display: flex;
+align-items: center;
+}
+
+.toast-body {
+padding: 12px 15px;
+height: 120px; /* Altura fixa para o corpo */
+}
+
+.toast-message {
+font-size: 13px;
+color: #667781;
+margin-bottom: 10px;
+line-height: 1.4;
+height: 60px; /* Altura fixa para a mensagem */
+overflow-y: auto; /* Adiciona scroll se necessário */
+}
+
+.toast-progress {
+height: 4px;
+background-color: #f0f2f5;
+border-radius: 2px;
+overflow: hidden;
+margin-top: 8px;
+}
+
+.toast-progress-bar {
+height: 100%;
+background-color: #00a884;
+width: 0%;
+transition: width 0.3s ease;
+}
+
+.toast-status {
+display: flex;
+align-items: center;
+gap: 6px;
+font-size: 13px;
+color: #667781;
+height: 20px; /* Altura fixa para o status */
+}
+
+.toast-status.success {
+color: #00a884;
+}
+
+.toast-status.error {
+color: #f44336;
+}
+
+.toast-status.warning {
+color: #f57c00;
+}
+
+/* Área para os logs de inicialização */
+.toast-logs {
+margin-top: 10px;
+height: 150px; /* Altura fixa para os logs */
+overflow-y: auto;
+font-size: 12px;
+color: #667781;
+background-color: #f9f9f9;
+border-radius: 4px;
+padding: 8px;
+}
+
+.log-entry {
+margin-bottom: 4px;
+padding-left: 16px;
+position: relative;
+}
+
+.log-entry:before {
+content: "•";
+position: absolute;
+left: 4px;
+color: #00a884;
+}
+
+.log-entry.completed {
+color: #00a884;
+}
+
+.log-entry.completed:before {
+content: "✓";
+}
+
+@keyframes slideIn {
+from {
+  transform: translateX(100%);
+  opacity: 0;
+}
+to {
+  transform: translateX(0);
+  opacity: 1;
+}
+}
+
+@keyframes slideOut {
+from {
+  transform: translateX(0);
+  opacity: 1;
+}
+to {
+  transform: translateX(100%);
+  opacity: 0;
+}
+}
+
+.toast.hide {
+animation: slideOut 0.3s ease forwards;
+}

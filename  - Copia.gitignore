@@ -1,0 +1,6 @@
+node_modules
+src/whatsapp/api/image
+src/whatsapp/api/logs
+src/whatsapp/api/services
+src/whatsapp/api/sounds
+src/whatsapp/api/tokens
