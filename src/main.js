@@ -1,4 +1,4 @@
-import { app, BrowserWindow, ipcMain, Menu } from 'electron';
+import { app, Tray, BrowserWindow, ipcMain, Menu } from 'electron';
 import path from 'path';
 import { fileURLToPath } from 'url'; 
 import Store from 'electron-store';
@@ -48,6 +48,32 @@ app.whenReady().then(() => {
     InitializeChatBot(store);
 
     mainWindow.webContents.openDevTools();
+    const tray = new Tray(path.join(__dirname, 'icon.ico'));
+
+    // Define context menu para o tray icon
+    const contextMenu = Menu.buildFromTemplate([
+        { label: 'Abrir', click: () => mainWindow.show() },
+        { label: 'Fechar', click: () => {
+            mainWindow.destroy();
+            app.quit();
+        } }
+    ]);
+    tray.setContextMenu(contextMenu);
+    tray.setToolTip('WhatsUp');
+    // Abrir menu ao clicar no icone tray
+    tray.on('click', () => {
+        if (mainWindow.isVisible()) {
+            mainWindow.hide();
+        } else {
+            mainWindow.show();
+        }
+    });
+
+    // Intercepta o botão de fechar para ocultar ao invés de fechar
+    mainWindow.on('close', (event) => {
+        event.preventDefault(); // Impede o fechamento direto
+        mainWindow.hide(); // Oculta a janela
+    });
 });
 
 ipcMain.handle('get-history', () => {
