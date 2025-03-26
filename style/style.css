@@ -25,7 +25,7 @@
     --color-bg-sidebar: #101D25;
     --primary-color: #00a884;
     --color-text-primary: #f0f2f5;
-    --color-text-secondary: #8899a6;
+    --color-text-secondary: #a2b5c4;
     --color-accent: #00a884;
     --color-hover: #1a2b3c;
     --bg-light: #211111;
@@ -762,7 +762,7 @@ font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .toast {
-background-color: white;
+background-color: var(--card-bg);
 border-radius: 8px;
 box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 margin-bottom: 10px;
@@ -785,7 +785,7 @@ height: 50px; /* Altura fixa para o cabeçalho */
 .toast-title {
 font-weight: 600;
 font-size: 14px;
-color: #111b21;
+color: var(--color-text-primary);
 display: flex;
 align-items: center;
 gap: 8px;
@@ -799,7 +799,7 @@ color: #00a884;
 .toast-close {
 background: none;
 border: none;
-color: #667781;
+color: var(--color-text-secondary);
 cursor: pointer;
 font-size: 18px;
 padding: 0;
@@ -814,7 +814,7 @@ height: 120px; /* Altura fixa para o corpo */
 
 .toast-message {
 font-size: 13px;
-color: #667781;
+color: var(--color-text-secondary);
 margin-bottom: 10px;
 line-height: 1.4;
 height: 60px; /* Altura fixa para a mensagem */
@@ -841,7 +841,7 @@ display: flex;
 align-items: center;
 gap: 6px;
 font-size: 13px;
-color: #667781;
+color: var(--color-text-secondary);
 height: 20px; /* Altura fixa para o status */
 }
 
@@ -864,7 +864,7 @@ height: 150px; /* Altura fixa para os logs */
 overflow-y: auto;
 font-size: 12px;
 color: #667781;
-background-color: #f9f9f9;
+background-color: var(--card-bg);
 border-radius: 4px;
 padding: 8px;
 }
